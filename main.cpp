@@ -22,3 +22,4 @@ void getResult()
 	cout << "Multiplication: " << num1 * num2 << endl;
 	cout << "Modulus: " << num1 % num2 << endl;
 }
+//test
