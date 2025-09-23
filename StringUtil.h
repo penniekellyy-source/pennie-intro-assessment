@@ -2,11 +2,15 @@
 #define STRINGUTIL_H
 #include <string>
 #include <iostream>
-class string
+
+class stringUtil
 {
-private:
+private: 
+
 
 public:
 
+
 };
+
 #endif
