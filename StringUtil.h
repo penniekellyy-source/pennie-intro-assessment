@@ -7,7 +7,7 @@ class stringUtil
 {
 private: 
 
-
+	string myString;
 public:
 
 
