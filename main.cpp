@@ -1,9 +1,15 @@
 #include <iostream>
+
+#include <string>
+#include <fstream>
 #include "StringUtil.h"
-#include "StringUtil.cpp"
 using namespace std;
 
 int main()
 {
-	
+	stringUtil util;
+	util.length("Blah");
+
+	cout << util.characterAt("string", 4);
+
 }

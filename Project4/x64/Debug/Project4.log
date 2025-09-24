@@ -1,0 +1,3 @@
+﻿  StringUtil.cpp
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(10,19): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+LINK : fatal error LNK1168: cannot open C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\x64\Debug\Project4.exe for writing
