@@ -25,4 +25,5 @@ public:
 	Room(string name, string description); // custom constructor
 
 	void enterRoom() const; // const to make sure room name can't be accidentally changed
+
 };

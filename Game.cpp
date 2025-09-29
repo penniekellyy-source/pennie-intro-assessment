@@ -23,3 +23,8 @@ void Room::enterRoom() const
 	cout << name << endl;
 	cout << description << endl << endl;
 }
+
+void roomSetup(Room rooms[], int size)
+{
+	if (size < 3) return; // stopping the function early
+}
