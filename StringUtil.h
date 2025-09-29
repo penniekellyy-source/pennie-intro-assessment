@@ -9,7 +9,7 @@ using namespace std;
 class stringUtil
 {
 private:
-
+	
 	string myString;
 
 public:
