@@ -13,7 +13,7 @@ private:
 	string description;
 
 
-	int north = -1; // arrays start at 0; -1 means "This room doesn't exist"
+	int north = -1; // since arrays start at 0, -1 means "This room doesn't exist"
 	int south = -1;
 	int east = -1;
 	int west = -1;
