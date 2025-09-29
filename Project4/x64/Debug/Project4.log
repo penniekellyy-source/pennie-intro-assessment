@@ -1,7 +1,2 @@
-﻿  StringUtil.cpp
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(11,24): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(72,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(86,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(112,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(115,37): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
-  Project4.vcxproj -> C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\x64\Debug\Project4.exe
+﻿  main.cpp
+  Project4.vcxproj -> C:\Users\gratu\Documents\penniekellyy-source\pennie-intro-assessment\x64\Debug\Project4.exe

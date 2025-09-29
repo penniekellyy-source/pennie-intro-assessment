@@ -1,0 +1,190 @@
+String Class Test
+-----------------
+Date: Sep 28 2025  Time: 23:48:47
+
+test_length() function : passed
+test_length() function : passed
+test_equalTo() function : passed
+test_append() function : passed
+test_prepend() function : passed
+test_toLower() function : passed
+test_toUpper() function : passed
+test_toUpper() function : passed
+test_find() function : passed
+test_findSkip() function : passed
+test_replacement() function : passed
+String Class Test
+-----------------
+Date: Sep 28 2025  Time: 23:48:47
+
+test_length() function : passed
+test_length() function : passed
+test_equalTo() function : passed
+test_append() function : passed
+test_prepend() function : passed
+test_toLower() function : passed
+test_toUpper() function : passed
+test_toUpper() function : passed
+test_find() function : passed
+test_findSkip() function : passed
+test_replacement() function : passed
+String Class Test
+-----------------
+Date: Sep 28 2025  Time: 23:48:47
+
+test_length() function : passed
+test_length() function : passed
+test_equalTo() function : passed
+test_append() function : passed
+test_prepend() function : passed
+test_toLower() function : passed
+test_toUpper() function : passed
+test_toUpper() function : passed
+test_find() function : passed
+test_findSkip() function : passed
+test_replacement() function : passed
+String Class Test
+-----------------
+Date: Sep 28 2025  Time: 23:48:47
+
+test_length() function : passed
+test_length() function : passed
+test_equalTo() function : passed
+test_append() function : passed
+test_prepend() function : passed
+test_toLower() function : passed
+test_toUpper() function : passed
+test_toUpper() function : passed
+test_find() function : passed
+test_findSkip() function : passed
+test_replacement() function : passed
+String Class Test
+-----------------
+Date: Sep 28 2025  Time: 23:52:33
+
+test_length() : passed
+test_length() : passed
+test_equalTo() : passed
+test_append() : passed
+test_prepend() : passed
+test_toLower() : passed
+test_toUpper() : passed
+test_toUpper() : passed
+test_find() : passed
+test_findSkip() : passed
+test_replacement() : passed
+String Class Test
+-----------------
+Date: Sep 28 2025  Time: 23:52:33
+
+test_length() : passed
+test_length() : passed
+test_equalTo() : passed
+test_append() : passed
+test_prepend() : passed
+test_toLower() : passed
+test_toUpper() : passed
+test_toUpper() : passed
+test_find() : passed
+test_findSkip() : passed
+test_replacement() : passed
+Date: Sep 28 2025
+  Time: 23:53:41
+
+test_length() : passed
+test_length() : passed
+test_equalTo() : passed
+test_append() : passed
+test_prepend() : passed
+test_toLower() : passed
+test_toUpper() : passed
+test_toUpper() : passed
+test_find() : passed
+test_findSkip() : passed
+test_replacement() : passed
+Date: Sep 28 2025
+  Time: 23:53:41
+
+test_length() : passed
+test_length() : passed
+test_equalTo() : passed
+test_append() : passed
+test_prepend() : passed
+test_toLower() : passed
+test_toUpper() : passed
+test_toUpper() : passed
+test_find() : passed
+test_findSkip() : passed
+test_replacement() : passed
+Date: Sep 28 2025
+  Time: 23:53:41
+
+test_length() : passed
+test_length() : passed
+test_equalTo() : passed
+test_append() : passed
+test_prepend() : passed
+test_toLower() : passed
+test_toUpper() : passed
+test_toUpper() : passed
+test_find() : passed
+test_findSkip() : passed
+test_replacement() : passed
+=== String Class Test ===
+Date: Sep 29 2025
+  Time: 00:11:49
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+=== String Class Test ===
+Date: Sep 29 2025
+  Time: 00:16:27
+
+test_length() : 1
+test_characterAt() : 1
+test_equalTo() : 1
+test_append() : 1
+test_prepend() : 1
+test_toLower() : 1
+test_toUpper() : 1
+test_find() : 1
+test_findSkip() : 1
+test_replacement() : 1
+
+=== String Class Test ===
+Date: Sep 29 2025
+  Time: 00:16:27
+
+test_length() : 1
+test_characterAt() : 1
+test_equalTo() : 1
+test_append() : 1
+test_prepend() : 1
+test_toLower() : 1
+test_toUpper() : 1
+test_find() : 1
+test_findSkip() : 1
+test_replacement() : 1
+
+Date: Sep 29 2025
+  Time: 00:23:16
+
+test_length() : passed
+test_length() : passed
+test_equalTo() : passed
+test_append() : passed
+test_prepend() : passed
+test_toLower() : passed
+test_toUpper() : passed
+test_find() : passed
+test_findSkip() : passed
+test_replacement() : passed
