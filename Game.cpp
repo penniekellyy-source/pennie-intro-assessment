@@ -8,39 +8,64 @@ using namespace std;
 
 Room::Room()
 {
-	name = " ";
-	description = " ";
-
-	north = -1; // initialize variables in constructor
-	south = -1;
-	east = -1;
-	west = -1;
+	roomName = " ";
+	roomDescription = " ";
 }
 
-Room::Room(string roomName, string desc)
+Room::Room(string name, string desc)
 {
-	name = roomName;
-	desc = description;
-
-	north = -1; // since arrays start at 0, -1 means "this room doesn't exist"
-	south = -1;
-	east = -1;
-	west = -1;
+	roomName = name;
+	roomDescription = desc;
 }
 
-void Room::enterRoom() const
+void Room::enterRoom() const // prints room info
 {
-	cout << name << endl;
-	cout << description << endl << endl;
+	cout << roomName << endl;
+	cout << roomDescription << endl << endl;
 }
 
 void roomSetup(Room rooms[], int size)
 {
 	if (size < 4) return; // stopping the function early if size exceeds amount of rooms
 
-	rooms[0] = Room(" ", " "); // object array, using custom constructor in room class, name & desc
-	rooms[1] = Room(" ", " ");
-	rooms[2] = Room(" ", " ");
-	rooms[3] = Room(" ", " ");
+	rooms[0] = Room("North Room", "This is the north room"); // object array, using custom constructor in room class, name & desc
+	rooms[1] = Room("South Room", "This is the south room"); // placeholder names & descs
+	rooms[2] = Room("East Room", "This is the east room");
+	rooms[3] = Room("West Room", "This is the west room");
 }
+
+void playGame(Room rooms[], int size)
+{
+	int currentRoom = 0;
+	string command;
+
+	cout << "Adventure Game Test" << endl;
+	cout << "Available Directions :" << endl;
+	cout << "North, South, East, West" << endl << endl;
+
+	cout << "Where will you go?" << endl;
+	cin >> command;
+
+	if (command == "north")
+	{
+		currentRoom = 0;
+	}
+	else if (command == "south")
+	{
+		currentRoom = 1;
+	}
+	else if (command == "east")
+	{
+		currentRoom = 2;
+	}
+	else if (command == "west")
+	{
+		currentRoom = 3;
+	}
+	else
+	{
+		cout << "You can't go there!" << endl;
+	}
+}
+
 

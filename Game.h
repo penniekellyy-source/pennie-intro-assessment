@@ -9,8 +9,8 @@ class Room
 {
 private:
 
-	string name;
-	string description;
+	string roomName;
+	string roomDescription;
 
 	int north; 
 	int south;
@@ -21,8 +21,10 @@ public:
 
 	Room(); // default constructor
 
-	Room(string name, string description); // custom constructor
+	Room(string roomName, string roomDescription); // custom constructor
 
 	void enterRoom() const; // const to make sure room name can't be accidentally changed
-};
 
+};
+void roomSetup(Room rooms[], int size);
+void playGame(Room rooms[], int size);

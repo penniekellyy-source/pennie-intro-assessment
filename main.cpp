@@ -7,7 +7,9 @@ using namespace std;
 
 int main()
 {
-	stringUtil myStringUtil("Hello World!");
+
+
+	/*stringUtil myStringUtil("Hello World!");
 	cout << " " << endl;
 
 	stringUtil testString;
@@ -40,6 +42,6 @@ int main()
 	cout << "Write to console : " << endl;
 	testString.writeToConsole();
 
-	testString.logTestResults();
+	testString.logTestResults();*/
 	
 }
