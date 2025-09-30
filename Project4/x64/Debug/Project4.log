@@ -1,12 +1,4 @@
 ﻿  Game.cpp
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(26,14): error C2059: syntax error: '='
-  (compiling source file 'Game.cpp')
-  
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(28,1): error C2143: syntax error: missing ';' before '}'
-  (compiling source file 'Game.cpp')
-  
-C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(28,1): error C2238: unexpected token(s) preceding ';'
-  (compiling source file 'Game.cpp')
-  
   main.cpp
   Generating Code...
+  Project4.vcxproj -> C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\x64\Debug\Project4.exe

@@ -2,12 +2,18 @@
 #include <string>
 #include <fstream>
 #include "StringUtil.h"
+#include "Game.h"
 
 using namespace std;
 
 int main()
 {
+	cout << "Available Directions:" << endl << endl;
+	cout << "North, South, East, West" << endl << endl;
 
+	Player player;
+
+	player.playGame();
 
 	/*stringUtil myStringUtil("Hello World!");
 	cout << " " << endl;
