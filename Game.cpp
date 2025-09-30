@@ -32,8 +32,6 @@ void Room::enterRoom() const
 {
 	cout << name << endl;
 	cout << description << endl << endl;
-
-
 }
 
 void roomSetup(Room rooms[], int size)

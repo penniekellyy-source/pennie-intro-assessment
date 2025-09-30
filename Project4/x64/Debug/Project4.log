@@ -1,2 +1,11 @@
-﻿  main.cpp
-  Project4.vcxproj -> C:\Users\gratu\Documents\penniekellyy-source\pennie-intro-assessment\x64\Debug\Project4.exe
+﻿  Game.cpp
+  main.cpp
+  StringUtil.cpp
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(23,19): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(73,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(89,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(105,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(108,37): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+  test_StringUtil.cpp
+  Generating Code...
+  Project4.vcxproj -> C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\x64\Debug\Project4.exe
