@@ -77,12 +77,14 @@ public:
 	}
 };
 
-class item : Item // placeholder until i figure out how to get it working
+class item : Item // all placeholder names till I get it working
 {
 public:
+
 	item() : Item("Item name", "Item description") {}
 	void use()
 	{
 		cout << "This is what the item does!" << endl;
 	}
+
 };

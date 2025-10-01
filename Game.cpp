@@ -92,7 +92,7 @@ void Player::playGame()
 		}
 		else
 		{
-			cout << "You can't go there!" << endl;
+			cout << "You can't go there!" << endl << endl;
 		}
 	}
 }
@@ -103,7 +103,7 @@ void Player::showHelp()
 	cout << "2. 'Go North' - Move to north room\n";
 	cout << "3. 'Go South' - Move to south room\n";
 	cout << "4. 'Go East' - Move to east room\n";
-	cout << "5. 'Go west' - Move to west room\n";
+	cout << "5. 'Go West' - Move to west room\n";
 	cout << "6. 'Quit' - Quit game\n\n";
 } 
 	
