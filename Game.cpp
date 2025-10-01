@@ -33,7 +33,8 @@ Locations::Locations(int size)
 {
 	if (size > 4) return; // stopping the function early if size exceeds amount of rooms
 
-	rooms[0] = Room("North Room", "This is the north room\n"); // object array, using custom constructor in room class, name & desc
+	rooms[0] = Room("North Room", "This is the north room\n");
+	// object array, using custom constructor in room class, name & desc
 	rooms[1] = Room("South Room", "This is the south room\n"); // placeholder names & descs
 	rooms[2] = Room("East Room", "This is the east room\n");
 	rooms[3] = Room("West Room", "This is the west room\n");
@@ -57,6 +58,7 @@ void Player::playGame()
 		cout << "> ";
 		getline(cin, command); cout << endl; // gets the whole line instead of just one word
 
+<<<<<<< Updated upstream
 		string cmd = util.toUpper(command);
 
 		if (cmd == "HELP")
@@ -70,25 +72,41 @@ void Player::playGame()
 		}
 
 		else if (util.toUpper(command) == "GO NORTH")
+=======
+		if (util.toUpper(command) == "GO NORTH")
+>>>>>>> Stashed changes
 		{
 			currentRoom = 0;
 			cout << locations.rooms[0].roomDescription << endl;
 			// grabbing array of rooms from locations class stored in player class & couts its description
+<<<<<<< Updated upstream
+=======
+			playGame(); // reruns playGame function from the beginning
+>>>>>>> Stashed changes
 		}
 		else if (util.toUpper(command) == "GO SOUTH")
 		{
 			currentRoom = 1;
 			cout << locations.rooms[1].roomDescription << endl;
+<<<<<<< Updated upstream
+=======
+			playGame();
+>>>>>>> Stashed changes
 		}
 		else if (util.toUpper(command) == "GO EAST")
 		{
 			currentRoom = 2;
 			cout << locations.rooms[2].roomDescription << endl;
+<<<<<<< Updated upstream
+=======
+			playGame();
+>>>>>>> Stashed changes
 		}
 		else if (util.toUpper(command) == "GO WEST")
 		{
 			currentRoom = 3;
 			cout << locations.rooms[3].roomDescription << endl;
+<<<<<<< Updated upstream
 		}
 		else
 		{
@@ -107,6 +125,18 @@ void Player::showHelp()
 	cout << "6. 'Quit' - Quit game\n\n";
 } 
 	
+=======
+			playGame();
+		}
+		else
+		{
+			cout << "You can't go there!" << endl;
+		}
+
+	}
+}
+
+>>>>>>> Stashed changes
 Player::Player()
 {
 
