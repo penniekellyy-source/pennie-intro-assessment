@@ -53,8 +53,36 @@ public:
 
 	void playGame();
 
+	void showHelp();
+
 	Player();
 
 	Locations locations;
 
+};
+
+class Item
+{
+protected:
+
+	string itemName;
+	string itemDescription;
+
+public:
+
+	Item(string name, string desc)
+	{
+		name = itemName;
+		desc = itemDescription;
+	}
+};
+
+class item : Item // placeholder until i figure out how to get it working
+{
+public:
+	item() : Item("Item name", "Item description") {}
+	void use()
+	{
+		cout << "This is what the item does!" << endl;
+	}
 };

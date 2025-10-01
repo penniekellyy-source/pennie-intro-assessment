@@ -43,6 +43,9 @@ Locations::Locations() : Locations(4){}; // default constructor runs this ^^^^
 
 void Player::playGame()
 {
+	cout << "Welcome to Text Adventure Game!" << endl << endl; // placeholder
+	cout << "Type 'help' for a list of commands." << endl << endl;
+
 	string command;
 	stringUtil util;
 	int currentRoom = 0;
@@ -50,41 +53,60 @@ void Player::playGame()
 	while (true)
 	{
 		cout << "Where will you go?" << endl << endl;
+
+		cout << "> ";
 		getline(cin, command); cout << endl; // gets the whole line instead of just one word
 
-		if (util.toUpper(command) == "GO NORTH")
-	{
-		currentRoom = 0;
-		cout << locations.rooms[0].roomDescription << endl;
-		// grabbing array of rooms from locations class stored in player class & couts its description
-		playGame(); // reruns playGame function from the beginning
-	}
-	else if (util.toUpper(command) == "GO SOUTH")
-	{
-		currentRoom = 1;
-		cout << locations.rooms[1].roomDescription << endl;
-		playGame();
-	}
-	else if (util.toUpper(command) == "GO EAST")
-	{
-		currentRoom = 2;
-		cout << locations.rooms[2].roomDescription << endl;
-		playGame();
-	}
-	else if (util.toUpper(command) == "GO WEST")
-	{
-		currentRoom = 3;
-		cout << locations.rooms[3].roomDescription << endl;
-		playGame();
-	}
-	else
-	{
-		cout << "You can't go there!" << endl;
+		string cmd = util.toUpper(command);
+
+		if (cmd == "HELP")
+		{
+			showHelp();
+		}
+		else if (cmd == "QUIT")
+		{
+			cout << "Thanks for playing!" << endl;
+			return;
+		}
+
+		else if (util.toUpper(command) == "GO NORTH")
+		{
+			currentRoom = 0;
+			cout << locations.rooms[0].roomDescription << endl;
+			// grabbing array of rooms from locations class stored in player class & couts its description
+		}
+		else if (util.toUpper(command) == "GO SOUTH")
+		{
+			currentRoom = 1;
+			cout << locations.rooms[1].roomDescription << endl;
+		}
+		else if (util.toUpper(command) == "GO EAST")
+		{
+			currentRoom = 2;
+			cout << locations.rooms[2].roomDescription << endl;
+		}
+		else if (util.toUpper(command) == "GO WEST")
+		{
+			currentRoom = 3;
+			cout << locations.rooms[3].roomDescription << endl;
+		}
+		else
+		{
+			cout << "You can't go there!" << endl;
+		}
 	}
 }
-	}
+void Player::showHelp()
+{
+	cout << "\n === Command list ===\n\n";
+	cout << "1. 'Help' - Command list\n";
+	cout << "2. 'Go North' - Move to north room\n";
+	cout << "3. 'Go South' - Move to south room\n";
+	cout << "4. 'Go East' - Move to east room\n";
+	cout << "5. 'Go west' - Move to west room\n";
+	cout << "6. 'Quit' - Quit game\n\n";
+} 
 	
-
 Player::Player()
 {
 

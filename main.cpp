@@ -8,9 +8,6 @@ using namespace std;
 
 int main()
 {
-	cout << "Available Directions:" << endl << endl;
-	cout << "North, South, East, West" << endl << endl;
-
 	Player player;
 
 	player.playGame();
