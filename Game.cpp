@@ -75,6 +75,9 @@ void Player::playGame()
 =======
 		if (util.toUpper(command) == "GO NORTH")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -84,6 +87,10 @@ void Player::playGame()
 			// grabbing array of rooms from locations class stored in player class & couts its description
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+			playGame(); // reruns playGame function from the beginning
+>>>>>>> Stashed changes
 =======
 			playGame(); // reruns playGame function from the beginning
 >>>>>>> Stashed changes
@@ -97,6 +104,10 @@ void Player::playGame()
 			cout << locations.rooms[1].roomDescription << endl;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+			playGame();
+>>>>>>> Stashed changes
 =======
 			playGame();
 >>>>>>> Stashed changes
@@ -110,6 +121,10 @@ void Player::playGame()
 			cout << locations.rooms[2].roomDescription << endl;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+			playGame();
+>>>>>>> Stashed changes
 =======
 			playGame();
 >>>>>>> Stashed changes
@@ -121,6 +136,7 @@ void Player::playGame()
 		{
 			currentRoom = 3;
 			cout << locations.rooms[3].roomDescription << endl;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		}
@@ -155,6 +171,17 @@ void Player::showHelp()
 		{
 			cout << "You can't go there!" << endl;
 		}
+=======
+			playGame();
+		}
+		else
+		{
+			cout << "You can't go there!" << endl;
+		}
+
+	}
+}
+>>>>>>> Stashed changes
 
 	}
 }
