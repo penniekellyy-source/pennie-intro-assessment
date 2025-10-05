@@ -43,34 +43,40 @@ Locations::Locations(int size)
 {
 	if (size > 4) return; // stopping the function early if size exceeds amount of rooms
 
-	rooms[0] = Room("North Room", "This is the north room\n");
 	// object array, using custom constructor in room class, name & desc
+	rooms[0] = Room("North Room", "You cautiously walk forward.\nYou find yourself in a dimly lit living room.\nA faint glint on a dusty side table catches your eye.\n"); 
 	rooms[1] = Room("South Room", "This is the south room\n"); // placeholder names & descs
 	rooms[2] = Room("East Room", "This is the east room\n");
 	rooms[3] = Room("West Room", "This is the west room\n");
+
+	rooms[0].roomItem = Item("Rusty Key", "A rusty key rests beneath a pile of unopened mail on the side table.", "A rusty key\n");
+	rooms[1].roomItem = Item("Item 2", "This is item 2", "Item 2 description\n");
+	rooms[2].roomItem = Item("Item 3", "This is item 3", "Item 3 description\n");
+	rooms[3].roomItem = Item("Item 4", "This is item 4", "Item 4 description\n");
 }
 
 Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
 
-Entity::Entity()
-{
-	currentRoom = 0;
-}
-
+//Entity::Entity()
+//{
+//	currentRoom = 0;
+//}
+//
 
 void Player::playGame()
 {
 	cout << "Welcome to Text Adventure Game!" << endl << endl; // placeholder
 	cout << "Type 'help' for a list of commands." << endl << endl;
 
+	cout << "Y
+	cout << "What will you do?" << endl << endl;
+
 	string command;
 	stringUtil util;
-	int currentRoom = 0;
+	currentRoom = 0;
 
 	while (true)
 	{
-		cout << "Where will you go?" << endl << endl;
-
 		cout << "> ";
 		getline(cin, command); cout << endl; // gets the whole line instead of just one word
 
@@ -79,6 +85,20 @@ void Player::playGame()
 		if (cmd == "HELP")
 		{
 			showHelp();
+		}
+		else if (cmd == "INSPECT")
+		{
+			cout << "You take a look around the room." << endl << endl;
+			cout << "You found " << locations.rooms[currentRoom].roomItem.getName() << "!" << endl << endl;
+			cout << locations.rooms[currentRoom].roomItem.getDescription() << endl << endl;
+		}
+		else if (cmd == "TAKE")
+		{
+			pickUpItem();
+		}
+		else if (cmd == "INVENTORY")
+		{
+			showInventory();
 		}
 		else if (cmd == "QUIT")
 		{
@@ -115,15 +135,57 @@ void Player::playGame()
 void Player::showHelp()
 {
 	cout << "\n === Command list ===\n\n";
-	cout << "1. 'Help' - Command list\n";
-	cout << "2. 'Go North' - Move to north room\n";
-	cout << "3. 'Go South' - Move to south room\n";
-	cout << "4. 'Go East' - Move to east room\n";
-	cout << "5. 'Go West' - Move to west room\n";
-	cout << "6. 'Quit' - Quit game\n\n";
+	cout << "- 'Help' - Command list\n";
+	cout << "- 'Go North' - Move to north room\n";
+	cout << "- 'Go South' - Move to south room\n";
+	cout << "- 'Go East' - Move to east room\n";
+	cout << "- 'Go West' - Move to west room\n";
+	cout << "- 'Quit' - Quit game\n";
+	cout << "- 'Inspect' - Look around the current room\n";
+	cout << "- 'Take' - Pick up item\n";
+	cout << "- 'Inventory' - Inventory list\n\n";
+
+}
+
+void Player::pickUpItem()
+{
+	if (itemCount >= 5) // checks if the player's inventory is already full
+	{
+		cout << "Your inventory is full!" << endl << endl;;
+		return; // stops function early
+	}
+
+	Item currentItem = locations.rooms[currentRoom].roomItem; // gets item in current room player is in
+
+	if (currentItem.getName() == "Nothing") // checks if the room has an item, default name means room is empty
+	{
+		cout << "There is nothing of use here." << endl << endl;
+	}
+
+	inventory[itemCount] = currentItem; // add current item into player's inventory array
+	itemCount++; // increases number of items player has
+
+	cout << "You picked up " << currentItem.getName() << "!" << endl << endl;
+
+	locations.rooms[currentRoom].roomItem = Item(); // resets to default to remove item from the room
+}
+
+void Player::showInventory()
+{
+	if (itemCount == 0)
+	{
+		cout << "Your inventory is empty!" << endl << endl;
+		return;
+	}
+
+	cout << "=== Inventory ===" << endl << endl;
+	for (int i = 0; i < itemCount; i++)
+	{
+		cout << "- " << inventory[i].getName() << ": " << inventory[i].getNewDescription() << endl;
+	}
 }
 
 Player::Player()
 {
-
+	itemCount = 0;
 }
