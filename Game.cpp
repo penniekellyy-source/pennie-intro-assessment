@@ -10,12 +10,22 @@ Room::Room()
 {
 	roomName = " ";
 	roomDescription = " ";
+
+	north = -1; // -1 = there is no room in this direction
+	south = -1;
+	east = -1;
+	west = -1;
 }
 
 Room::Room(string name, string desc)
 {
 	roomName = name;
 	roomDescription = desc;
+
+	north = -1;
+	south = -1;
+	east = -1;
+	west = -1;
 }
 
 Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, int setWest)
@@ -40,7 +50,13 @@ Locations::Locations(int size)
 	rooms[3] = Room("West Room", "This is the west room\n");
 }
 
-Locations::Locations() : Locations(4){}; // default constructor runs this ^^^^
+Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
+
+Entity::Entity()
+{
+	currentRoom = 0;
+}
+
 
 void Player::playGame()
 {
@@ -58,7 +74,6 @@ void Player::playGame()
 		cout << "> ";
 		getline(cin, command); cout << endl; // gets the whole line instead of just one word
 
-<<<<<<< Updated upstream
 		string cmd = util.toUpper(command);
 
 		if (cmd == "HELP")
@@ -70,75 +85,25 @@ void Player::playGame()
 			cout << "Thanks for playing!" << endl;
 			return;
 		}
-
-		else if (util.toUpper(command) == "GO NORTH")
-=======
-		if (util.toUpper(command) == "GO NORTH")
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+		else if (cmd == "GO NORTH")
 		{
 			currentRoom = 0;
 			cout << locations.rooms[0].roomDescription << endl;
-			// grabbing array of rooms from locations class stored in player class & couts its description
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-			playGame(); // reruns playGame function from the beginning
->>>>>>> Stashed changes
-=======
-			playGame(); // reruns playGame function from the beginning
->>>>>>> Stashed changes
-=======
-			playGame(); // reruns playGame function from the beginning
->>>>>>> Stashed changes
 		}
-		else if (util.toUpper(command) == "GO SOUTH")
+		else if (cmd == "GO SOUTH")
 		{
 			currentRoom = 1;
 			cout << locations.rooms[1].roomDescription << endl;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-			playGame();
->>>>>>> Stashed changes
-=======
-			playGame();
->>>>>>> Stashed changes
-=======
-			playGame();
->>>>>>> Stashed changes
 		}
-		else if (util.toUpper(command) == "GO EAST")
+		else if (cmd == "GO EAST")
 		{
 			currentRoom = 2;
 			cout << locations.rooms[2].roomDescription << endl;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-			playGame();
->>>>>>> Stashed changes
-=======
-			playGame();
->>>>>>> Stashed changes
-=======
-			playGame();
->>>>>>> Stashed changes
 		}
-		else if (util.toUpper(command) == "GO WEST")
+		else if (cmd == "GO WEST")
 		{
 			currentRoom = 3;
 			cout << locations.rooms[3].roomDescription << endl;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 		}
 		else
 		{
@@ -146,6 +111,7 @@ void Player::playGame()
 		}
 	}
 }
+
 void Player::showHelp()
 {
 	cout << "\n === Command list ===\n\n";
@@ -155,42 +121,8 @@ void Player::showHelp()
 	cout << "4. 'Go East' - Move to east room\n";
 	cout << "5. 'Go West' - Move to west room\n";
 	cout << "6. 'Quit' - Quit game\n\n";
-} 
-	
-=======
-			playGame();
-		}
-		else
-		{
-			cout << "You can't go there!" << endl;
-		}
-=======
-			playGame();
-		}
-		else
-		{
-			cout << "You can't go there!" << endl;
-		}
-=======
-			playGame();
-		}
-		else
-		{
-			cout << "You can't go there!" << endl;
-		}
-
-	}
-}
->>>>>>> Stashed changes
-
-	}
-}
->>>>>>> Stashed changes
-
-	}
 }
 
->>>>>>> Stashed changes
 Player::Player()
 {
 

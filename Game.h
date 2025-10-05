@@ -38,7 +38,7 @@ public:
 
 };
 
-class Locations : Room
+class Locations
 {
 public:
 
@@ -47,7 +47,7 @@ public:
 	Room rooms[4];
 };
 
-class Player : Entity
+class Player : public Entity
 {
 public:
 
@@ -72,19 +72,19 @@ public:
 
 	Item(string name, string desc)
 	{
-		name = itemName;
-		desc = itemDescription;
+		itemName = name;
+		itemDescription = desc;
 	}
 };
 
-class item : Item // all placeholder names till I get it working
+class ExampleItem : public Item // placeholder names
 {
 public:
 
-	item() : Item("Item name", "Item description") {}
+	ExampleItem() : Item ("Item name", "Item description") {}
+
 	void use()
 	{
 		cout << "This is what the item does!" << endl;
 	}
-
 };
