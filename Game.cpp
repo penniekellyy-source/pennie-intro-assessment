@@ -15,6 +15,8 @@ Room::Room()
 	south = -1;
 	east = -1;
 	west = -1;
+
+	isLocked = false;
 }
 
 Room::Room(string name, string desc)
@@ -26,6 +28,8 @@ Room::Room(string name, string desc)
 	south = -1;
 	east = -1;
 	west = -1;
+
+	isLocked = false;
 }
 
 Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, int setWest)
@@ -37,6 +41,8 @@ Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, in
 	south = setSouth;
 	east = setEast;
 	west = setWest;
+	
+	isLocked = false;
 }
 
 Locations::Locations(int size)
@@ -44,31 +50,24 @@ Locations::Locations(int size)
 	if (size > 4) return; // stopping the function early if size exceeds amount of rooms
 
 	// object array, using custom constructor in room class, name & desc
-	rooms[0] = Room("North Room", "You cautiously walk forward.\nYou find yourself in a dimly lit living room.\nA faint glint on a dusty side table catches your eye.\n"); 
-	rooms[1] = Room("South Room", "This is the south room\n"); // placeholder names & descs
-	rooms[2] = Room("East Room", "This is the east room\n");
-	rooms[3] = Room("West Room", "This is the west room\n");
+	rooms[0] = Room("North Room", "You cautiously walk forward.\nYou find yourself in a dimly lit living room.\n"); 
+	rooms[1] = Room("South Room", "You walk through the door behind you, only to find a spacious, empty room.\n"); // placeholder names & descs
+	rooms[2] = Room("East Room", "You take a step through the door on your right, and you were greeted by an empty office.\n");
+	rooms[3] = Room("West Room", "You walk into the west room. It's revealed to be a large library that smelled of lavender.\n");
+	rooms[3].isLocked = true;
 
-	rooms[0].roomItem = Item("Rusty Key", "A rusty key rests beneath a pile of unopened mail on the side table.", "A rusty key\n");
-	rooms[1].roomItem = Item("Item 2", "This is item 2", "Item 2 description\n");
-	rooms[2].roomItem = Item("Item 3", "This is item 3", "Item 3 description\n");
-	rooms[3].roomItem = Item("Item 4", "This is item 4", "Item 4 description\n");
+	rooms[0].roomItem = Key();
+	rooms[1].roomItem = Item();
+	rooms[2].roomItem = Item();
+	rooms[3].roomItem = Item();
 }
 
 Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
-
-//Entity::Entity()
-//{
-//	currentRoom = 0;
-//}
-//
 
 void Player::playGame()
 {
 	cout << "Welcome to Text Adventure Game!" << endl << endl; // placeholder
 	cout << "Type 'help' for a list of commands." << endl << endl;
-
-	cout << "Y
 	cout << "What will you do?" << endl << endl;
 
 	string command;
@@ -100,6 +99,10 @@ void Player::playGame()
 		{
 			showInventory();
 		}
+		else if (cmd == "USE")
+		{
+			useItem();
+		}
 		else if (cmd == "QUIT")
 		{
 			cout << "Thanks for playing!" << endl;
@@ -109,6 +112,7 @@ void Player::playGame()
 		{
 			currentRoom = 0;
 			cout << locations.rooms[0].roomDescription << endl;
+			cout << "A faint glint on a dusty side table catches your eye.\n" << endl << endl;
 		}
 		else if (cmd == "GO SOUTH")
 		{
@@ -122,8 +126,15 @@ void Player::playGame()
 		}
 		else if (cmd == "GO WEST")
 		{
-			currentRoom = 3;
-			cout << locations.rooms[3].roomDescription << endl;
+			if (locations.rooms[3].isLocked)
+			{
+				cout << "The door is locked. Maybe you need a key?" << endl << endl;
+			}
+			else
+			{
+				currentRoom = 3;
+				cout << locations.rooms[3].roomDescription << endl;
+			}
 		}
 		else
 		{
@@ -184,6 +195,46 @@ void Player::showInventory()
 		cout << "- " << inventory[i].getName() << ": " << inventory[i].getNewDescription() << endl;
 	}
 }
+
+void Player::useItem()
+{
+	if (itemCount == 0)
+	{
+		cout << "You have nothing to use!" << endl << endl;
+		return;
+	}
+
+	cout << "Which item would you like to use?" << endl;
+	for (int i = 0; i < itemCount; i++)
+	{
+		cout << i + 1 << ". " << inventory[i].getName() << endl; // converts 0, 1, 2... to 1, 2, 3..., calls getName() and prints
+	}
+
+	string input;
+	getline(cin, input);
+	int choice = stoi(input);
+
+	if (choice < 1 || choice > itemCount)
+	{
+		cout << "Invalid choice." << endl;
+		return;
+	}
+
+	Item selectedItem = inventory[choice - 1];
+	cout << endl;
+
+	// manually check type instead of polymorphism
+	if (selectedItem.getType() == "Key")
+	{
+		cout << "You use the Rusty Key." << endl;
+		cout << "The lock clicks open!" << endl;
+		locations.rooms[3].isLocked = false; // unlocks west room
+	}
+	else
+	{
+		selectedItem.Use();
+	}
+}	
 
 Player::Player()
 {

@@ -23,6 +23,7 @@ protected:
 	string itemName;
 	string itemDescription;
 	string newDescription;
+	string itemType;
 
 public:
 
@@ -31,28 +32,41 @@ public:
 		itemName = "Nothing";
 		itemDescription = "There is nothing of use here.";
 		newDescription = "You aren't carrying anything of use!";
+		itemType = "None";
 	}
 
-	Item(string name, string desc, string newDesc)
+	Item(string name, string desc, string newDesc, string type)
 	{
 		itemName = name;
 		itemDescription = desc;
 		newDescription = newDesc;
+		itemType = type;
 	}
 
-	string getName()
-	{
-		return itemName;
-	}
+	string getName() { return itemName; }
 
-	string getDescription()
-	{
-		return itemDescription;
-	}
+	string getDescription() { return itemDescription; }
 
-	string getNewDescription()
+	string getNewDescription() { return newDescription; }
+
+	string getType() { return itemType; }
+
+	virtual void Use()
 	{
-		return newDescription;
+		cout << "You can't use this item." << endl;
+	}
+};
+
+class Key : public Item
+{
+public:
+
+	Key() : Item("Rusty Key","An old, rusty key.","A rusty key you picked up earlier.", "Key") {}
+
+	void Use() override
+	{
+		cout << "You use the Rusty key." << endl;
+		cout << "The lock clicks!" << endl;
 	}
 };
 
@@ -70,6 +84,7 @@ public:
 	string roomName;
 	string roomDescription;
 	Item roomItem;
+	bool isLocked;
 
 	Room(); // default constructor
 
@@ -103,6 +118,7 @@ public:
 
 	void pickUpItem();
 	void showInventory();
+	void useItem();
 
 };
 
