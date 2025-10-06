@@ -1,11 +1,2 @@
 ﻿  Game.cpp
-  StringUtil.cpp
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(23,19): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(73,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(89,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(105,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(108,37): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
-  main.cpp
-  test_StringUtil.cpp
-  Generating Code...
   Project4.vcxproj -> C:\Users\gratu\OneDrive\Documents\GitHub\x64\Debug\Project4.exe
