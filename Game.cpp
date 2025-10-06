@@ -53,7 +53,7 @@ Locations::Locations(int size)
 	rooms[0] = Room("North Room", "You cautiously walk forward.\nYou find yourself in a dimly lit living room.\n"); 
 	rooms[1] = Room("South Room", "You walk through the door behind you, only to find a spacious, empty room.\n"); // placeholder names & descs
 	rooms[2] = Room("East Room", "You take a step through the door on your right, and you were greeted by an empty office.\n");
-	rooms[3] = Room("West Room", "You walk into the west room. It's revealed to be a large library that smelled of lavender.\n");
+	rooms[3] = Room("West Room", "You walk into the west room. It's revealed to be a large library that smells of freshly burnt sage.\n");
 	rooms[3].isLocked = true;
 
 	rooms[0].roomItem = Key();
