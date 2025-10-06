@@ -120,6 +120,9 @@ public:
 	void showInventory();
 	void useItem();
 
+	int currentXP;
+	int level;
+
 };
 
 

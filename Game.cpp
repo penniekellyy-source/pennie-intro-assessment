@@ -155,7 +155,8 @@ void Player::showHelp()
 	cout << "- 'Inspect' - Look around the current room\n";
 	cout << "- 'Take' - Pick up item\n";
 	cout << "- 'Inventory' - Inventory list\n";
-	cout << "- 'Use' - Use an item\n\n";
+	cout << "- 'Use' - Use an item\n";
+	cout << "- 'Stats' - Display player stats\n\n";
 
 }
 
@@ -213,7 +214,7 @@ void Player::useItem()
 
 	string input;
 	getline(cin, input);
-	int choice = stoi(input);
+	int choice = stoi(input); // string to integer
 
 	if (choice < 1 || choice > itemCount)
 	{
@@ -240,4 +241,27 @@ void Player::useItem()
 Player::Player()
 {
 	itemCount = 0;
+	currentXP = 0;
+	level = 1;
+
+	void gainXP(int amount) // checks for level-ups
+	{
+		cout << "You gained " << amount << " XP!" << endl << endl;
+		currentXP += amount;
+
+		while (currentXP >= XPforLevel(level + 1)) // handles multiple level-ups in one XP gain
+		{
+			level++;
+			cout << "You leveled up! Current level : " << level << "!" << endl << endl;
+		}
+	}
+
+	void displayStats() // shows progress
+	{
+		cout << "=== Player Stats ===\n";
+		cout << "Player level : " << level << endl;
+		cout << "Current XP : " << currentXP << endl;
+		cout << "XP needed for next level : " << XPforLevel(level + 1) << endl;
+		cout << "XP remaining to level up : " << XPforLevel(level + 1) - currentXP << endl;
+	}
 }
