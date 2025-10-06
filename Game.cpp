@@ -112,7 +112,7 @@ void Player::playGame()
 		{
 			currentRoom = 0;
 			cout << locations.rooms[0].roomDescription << endl;
-			cout << "A faint glint on a dusty side table catches your eye.\n" << endl << endl;
+			cout << "A faint glint on a dusty side table catches your eye." << endl << endl;
 		}
 		else if (cmd == "GO SOUTH")
 		{
@@ -154,7 +154,8 @@ void Player::showHelp()
 	cout << "- 'Quit' - Quit game\n";
 	cout << "- 'Inspect' - Look around the current room\n";
 	cout << "- 'Take' - Pick up item\n";
-	cout << "- 'Inventory' - Inventory list\n\n";
+	cout << "- 'Inventory' - Inventory list\n";
+	cout << "- 'Use' - Use an item\n\n";
 
 }
 
