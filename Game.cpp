@@ -64,6 +64,11 @@ Locations::Locations(int size)
 
 Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
 
+Player::Player()
+{
+
+}
+
 void Player::playGame()
 {
 	cout << "Welcome to Text Adventure Game!" << endl << endl; // placeholder
@@ -225,7 +230,6 @@ void Player::useItem()
 	Item selectedItem = inventory[choice - 1];
 	cout << endl;
 
-	// manually check type instead of polymorphism
 	if (selectedItem.getType() == "Key")
 	{
 		cout << "You use the Rusty Key." << endl;
@@ -238,30 +242,3 @@ void Player::useItem()
 	}
 }	
 
-Player::Player()
-{
-	itemCount = 0;
-	currentXP = 0;
-	level = 1;
-
-	void gainXP(int amount) // checks for level-ups
-	{
-		cout << "You gained " << amount << " XP!" << endl << endl;
-		currentXP += amount;
-
-		while (currentXP >= XPforLevel(level + 1)) // handles multiple level-ups in one XP gain
-		{
-			level++;
-			cout << "You leveled up! Current level : " << level << "!" << endl << endl;
-		}
-	}
-
-	void displayStats() // shows progress
-	{
-		cout << "=== Player Stats ===\n";
-		cout << "Player level : " << level << endl;
-		cout << "Current XP : " << currentXP << endl;
-		cout << "XP needed for next level : " << XPforLevel(level + 1) << endl;
-		cout << "XP remaining to level up : " << XPforLevel(level + 1) - currentXP << endl;
-	}
-}
