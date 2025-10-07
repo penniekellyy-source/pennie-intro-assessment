@@ -17,6 +17,7 @@ Room::Room()
 	west = -1;
 
 	isLocked = false;
+	inspected = false;
 }
 
 Room::Room(string name, string desc)
@@ -30,6 +31,7 @@ Room::Room(string name, string desc)
 	west = -1;
 
 	isLocked = false;
+	inspected = false;
 }
 
 Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, int setWest)
@@ -43,6 +45,7 @@ Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, in
 	west = setWest;
 	
 	isLocked = false;
+	inspected = false;
 }
 
 Locations::Locations(int size)
@@ -50,10 +53,10 @@ Locations::Locations(int size)
 	if (size > 4) return; // stopping the function early if size exceeds amount of rooms
 
 	// object array, using custom constructor in room class, name & desc
-	rooms[0] = Room("North Room", "You cautiously walk forward.\nYou find yourself in a dimly lit living room.\n"); 
-	rooms[1] = Room("South Room", "You walk through the door behind you, only to find a spacious, empty room.\n"); // placeholder names & descs
-	rooms[2] = Room("East Room", "You take a step through the door on your right, and you were greeted by an empty office.\n");
-	rooms[3] = Room("West Room", "You walk into the west room. It's revealed to be a large library that smells of freshly burnt sage.\n");
+	rooms[0] = Room("North Room", "You cautiously step into the north room, the door's hinges creaking profusely.\n"); 
+	rooms[1] = Room("South Room", "");
+	rooms[2] = Room("East Room", "");
+	rooms[3] = Room("West Room", "");
 	rooms[3].isLocked = true;
 
 	rooms[0].roomItem = Key();
@@ -66,15 +69,17 @@ Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
 
 Player::Player()
 {
-	currentRoom = 0;
 	itemCount = 0;
+	
 }
 
 void Player::playGame()
 {
-	cout << "Welcome to Text Adventure Game!" << endl << endl; // placeholder
+	cout << "Welcome to Text Horror Survival Game!" << endl << endl; // placeholder
 	cout << "Type 'help' for a list of commands." << endl << endl;
-	cout << "What will you do?" << endl << endl;
+	cout << "You wake up in an unfamiliar room.\nIt smells of mildew and the ceilings are leaking.\n\nThe distressed wooden planks beneath you are damp and noisy as you stand up and dust yourself off,\ntaking note of your surroundings.\n\n";
+	cout << "You seemed to be in a very small room with one door on each wall that surrounded you.\nYou wonder if the rooms' contents can give you answers as to how you wound up here,\nand maybe how to get out...\n\n";
+	cout << "You decide to look for an exit.\n\n";
 
 	string command;
 	stringUtil util;
@@ -95,7 +100,8 @@ void Player::playGame()
 		{
 			cout << "You take a look around the room." << endl << endl;
 			cout << "You found " << locations.rooms[currentRoom].roomItem.getName() << "!" << endl << endl;
-			cout << locations.rooms[currentRoom].roomItem.getDescription() << endl << endl;
+
+			locations.rooms[currentRoom].inspected = true; // checks if the room has been inspected to prevent the player being able to prematurely grab an item before inspecting the room
 		}
 		else if (cmd == "TAKE")
 		{
@@ -174,6 +180,12 @@ void Player::pickUpItem()
 		return; // stops function early
 	}
 
+	if (!locations.rooms[currentRoom].inspected)
+	{
+		cout << "You haven't found anything of use yet! Try looking around first." << endl << endl;
+		return;
+	}
+
 	Item currentItem = locations.rooms[currentRoom].roomItem; // gets item in current room player is in
 
 	if (currentItem.getName() == "Nothing") // checks if the room has an item, default name means room is empty
@@ -200,7 +212,7 @@ void Player::showInventory()
 	cout << "=== Inventory ===" << endl << endl;
 	for (int i = 0; i < itemCount; i++)
 	{
-		cout << "- " << inventory[i].getName() << ": " << inventory[i].getNewDescription() << endl;
+		cout << "- " << inventory[i].getName() << " : " << inventory[i].getDescription() << endl;
 	}
 }
 
@@ -231,7 +243,8 @@ void Player::useItem()
 	Item selectedItem = inventory[choice - 1];
 	cout << endl;
 
-	if (selectedItem.getType() == "Key")
+	// manually check type instead of polymorphism
+	if (selectedItem.getName() == "Rusty Key")
 	{
 		cout << "You use the Rusty Key." << endl;
 		cout << "The lock clicks open!" << endl;
@@ -242,4 +255,3 @@ void Player::useItem()
 		selectedItem.Use();
 	}
 }	
-
