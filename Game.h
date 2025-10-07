@@ -28,7 +28,7 @@ public:
 	Item() // default constructor
 	{
 		itemName = "Nothing";
-		itemDescription = "There is nothing of use here.";
+		itemDescription = " ";
 	}
 
 	Item(string name, string desc)
@@ -43,7 +43,7 @@ public:
 
 	virtual void Use()
 	{
-		cout << "You can't use this item." << endl;
+		cout << "You can't use this item.\n\n";
 	}
 };
 
@@ -51,12 +51,24 @@ class Key : public Item
 {
 public:
 
-	Key() : Item("Rusty Key","An old, rusty key.") {}
+	Key() : Item("Rusty Key","Maybe it unlocks some kind of door?") {}
 
 	void Use() override
 	{
-		cout << "You use the Rusty Key." << endl;
+		cout << "You use the Rusty Key..." << endl;
 		cout << "The lock clicks!" << endl;
+	}
+};
+
+class Code : public Item
+{
+public:
+
+	Code() : Item("East Door Code", "The code to the East Room.") {}
+
+	void Use() override
+	{
+		cout << "You insert the East Door Code...\nThe lock beeps and clicks, and the door creaks open.\n\n";
 	}
 };
 
@@ -91,7 +103,7 @@ public:
 
 	Locations();
 	Locations(int size);
-	Room rooms[4];
+	Room rooms[5];
 };
 
 class Player : public Entity
