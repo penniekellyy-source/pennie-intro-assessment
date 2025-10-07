@@ -66,7 +66,8 @@ Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
 
 Player::Player()
 {
-
+	currentRoom = 0;
+	itemCount = 0;
 }
 
 void Player::playGame()
