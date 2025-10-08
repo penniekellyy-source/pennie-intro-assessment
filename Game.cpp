@@ -18,6 +18,7 @@ Room::Room()
 
 	isLocked = false;
 	inspected = false;
+	visited = false;
 }
 
 Room::Room(string name, string desc)
@@ -32,6 +33,7 @@ Room::Room(string name, string desc)
 
 	isLocked = false;
 	inspected = false;
+	visited = false;
 }
 
 Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, int setWest)
@@ -46,6 +48,7 @@ Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, in
 	
 	isLocked = false;
 	inspected = false;
+	visited = false;
 }
 
 Locations::Locations(int size)
@@ -55,11 +58,12 @@ Locations::Locations(int size)
 	// object array, using custom constructor in room class, name & desc
 	
 	rooms[0] = Room("Starting Room", " ");
-	rooms[1] = Room("North Room", "You cautiously step into the north room, the floor creaking beneath you.\n\nYou were immediately greeted by the smell of sulfur,"
-		"and you were practically inhaling dust.\nThe room was empty save for a few sets of furniture covered with thick white cloths.\n");
-	rooms[2] = Room("South Room", "");
-	rooms[3] = Room("East Room", "");
-	rooms[4] = Room("West Room", "");
+	rooms[1] = Room("North Room", "You cautiously step into the north room, the floor creaking beneath you.\n\nYou were immediately greeted by the smell of freshly burnt sage,"
+	" the air thick with dust.\nThe room was empty save for a few sets of furniture covered with thick white cloths.\n");
+	rooms[2] = Room("South Room", " ");
+	rooms[3] = Room("East Room", "The east room ");
+	rooms[4] = Room("West Room", "You step inside the west room, your body temperature instantly dropping. The air is colder in here,\nthe faint hum of the AC in the corner"
+	" drowning out the silence.\n\nUnlike the rest of the building, the floors were poorly carpeted and the walls were covered\nwith a dull floral wallpaper.\n");
 	
 	rooms[3].isLocked = true;
 	rooms[4].isLocked = true;
@@ -80,15 +84,22 @@ Player::Player()
 
 void Player::playGame()
 {
-	cout << "You wake up in an unfamiliar room.\nIt smells of mildew, and the sound of water dripping from the ceiling can be heard.\n\nThe distressed wooden planks beneath you are damp and noisy as you stand"
-	" up and dust yourself off,\ntaking note of your surroundings.\n\nYou seemed to be in a very small room with one door on each wall that surrounded you.\nYou wonder if the"
-	" rooms' contents can give you answers as to how you wound up here...\nand maybe how to get out.\n\n";
-	cout << "Maybe you should look around...\n\n";
+	cout << "You wake up in an unfamiliar room. It smells of mildew, and the faint sound of water dripping\nfrom the ceiling can be heard.\n\nThe distressed wooden planks beneath"
+	" you are damp and noisy as you stand up and dust yourself off,\ntaking note of your surroundings.\n\nYou seemed to be in a very small room with one door on each wall that" 
+	" surrounded you. You wonder\nif the rooms' contents can give you answers as to how you wound up here... and maybe how to get out.\n\n";
+	cout << "Maybe you should look around...?\n\n";
 	cout << "Type 'help' for a list of commands." << endl << endl;
 
 	string command;
 	stringUtil util;
 	currentRoom = 0;
+
+	if (locations.rooms[currentRoom].visited) // checks if the player has been in a room once before to avoid redundancy
+	{
+		cout << "You haven't found anything of use yet! Try looking around first." << endl << endl;
+		return;
+	}
+
 
 	while (true)
 	{
@@ -128,13 +139,33 @@ void Player::playGame()
 		else if (util.find(cmd, "NORTH"))
 		{
 			currentRoom = 1;
-			cout << locations.rooms[1].roomDescription << endl;
-			cout << "A faint glint on an uncovered, dusty side table catches your eye." << endl << endl;
+
+			if (!locations.rooms[1].visited)
+			{
+				cout << locations.rooms[1].roomDescription << endl;
+				cout << "A faint glint on an uncovered, dusty side table catches your eye." << endl << endl;
+				locations.rooms[1].visited = true;
+			}
+			else
+			{
+				cout << "You return to the north room.\n\n";
+			}
 		}
 		else if (util.find(cmd, "SOUTH"))
 		{
 			currentRoom = 2;
-			cout << locations.rooms[2].roomDescription << endl;
+
+			if (!locations.rooms[2].visited)
+			{
+				cout << locations.rooms[2].roomDescription << endl;
+				cout << "..." << endl << endl;
+				locations.rooms[2].visited = true;
+			}
+			else
+			{
+				cout << "You return to the south room.\n\n";
+			}
+			
 		}
 		else if (util.find(cmd, "EAST"))
 		{
@@ -145,7 +176,17 @@ void Player::playGame()
 			else
 			{
 				currentRoom = 3;
-				cout << locations.rooms[3].roomDescription << endl;
+
+				if (!locations.rooms[3].visited)
+				{
+					cout << locations.rooms[3].roomDescription << endl;
+					cout << "..." << endl << endl;
+					locations.rooms[3].visited = true;
+				}
+				else
+				{
+					cout << "You return to the east room.\n\n";
+				}
 			}
 		}
 		else if (util.find(cmd, "WEST"))
@@ -157,13 +198,24 @@ void Player::playGame()
 			else
 			{
 				currentRoom = 4;
-				cout << locations.rooms[4].roomDescription << endl;
+
+				if (!locations.rooms[4].visited)
+				{
+					cout << locations.rooms[4].roomDescription << endl;
+					cout << "There seemed to be something hidden inside of the AC...\n\n";
+					locations.rooms[4].visited = true;
+				}
+				else
+				{
+					cout << "You return to the west room.\n\n";
+				}
+				
 			}
 		}
 		else if (util.find(cmd, "BACK"))
 		{
 			currentRoom = 0;
-			cout << "You return to the room you woke up in.\n\n";
+			cout << "You find yourself once again in the confined room with doors on all sides and no clear answers.\n\n";
 		}
 		else
 		{
@@ -278,7 +330,7 @@ void Player::useItem()
 		}
 		else
 		{
-			cout << "You can't use that here! Try using it in front of the door in the starting room.\n\n";
+			cout << "You can't use that here! Try using it in front of the west door in the starting room.\n\n";
 		}
 	}
 	else if (selectedItem.getName() == "East Door Code")
@@ -296,7 +348,7 @@ void Player::useItem()
 		}
 		else
 		{
-			cout << "You can't use that here! Try using it in front of the door in the starting room.\n\n";
+			cout << "You can't use that here! Try using it in front of the east door in the starting room.\n\n";
 		}
 	}
 	else

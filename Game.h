@@ -64,11 +64,11 @@ class Code : public Item
 {
 public:
 
-	Code() : Item("East Door Code", "The code to the East Room.") {}
+	Code() : Item("East Door Code", "It's the code to the East Room.") {}
 
 	void Use() override
 	{
-		cout << "You insert the East Door Code...\nThe lock beeps and clicks, and the door creaks open.\n\n";
+		cout << "You insert the East Door Code...\nThe lock beeps and clicks, and the door creaks open!\n\n";
 	}
 };
 
@@ -88,6 +88,7 @@ public:
 	Item roomItem;
 	bool isLocked;
 	bool inspected;
+	bool visited;
 
 	Room(); // default constructor
 
