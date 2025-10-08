@@ -184,8 +184,8 @@ void Player::showHelp()
 	cout << "- 'Inspect' - Look around the current room\n";
 	cout << "- 'Take' - Pick up item\n";
 	cout << "- 'Inventory' - Inventory list\n";
-	cout << "- 'Use' - Use an item\n";
-	cout << "- 'Stats' - Display player stats\n\n";
+	cout << "- 'Use' - Use an item\n\n";
+	//cout << "- 'Stats' - Display player stats\n\n";
 
 }
 
@@ -264,32 +264,40 @@ void Player::useItem()
 	// manually check type instead of polymorphism
 	if (selectedItem.getName() == "Rusty Key")
 	{
-		if (currentRoom == 4 && locations.rooms[4].isLocked)
+		if (currentRoom == 0)
 		{
-			cout << "You use the Rusty Key." << endl;
+			cout << "You use the Rusty Key on the west door." << endl;
 			cout << "The lock clicks open!" << endl << endl;
 			locations.rooms[4].isLocked = false; // unlocks west room
-		}
 
-		for (int i = choice - 1; i < itemCount - 1; i++)
-		{
-			inventory[i] = inventory[i + 1];
+			for (int i = choice - 1; i < itemCount - 1; i++)
+			{
+				inventory[i] = inventory[i + 1];
+			}
+			itemCount--;
 		}
-		itemCount--;
+		else
+		{
+			cout << "You can't use that here! Try using it in front of the door in the starting room.\n\n";
+		}
 	}
 	else if (selectedItem.getName() == "East Door Code")
 	{
-		if (currentRoom == 3 && locations.rooms[3].isLocked)
+		if (currentRoom == 0)
 		{
-			cout << "You insert the East Door Code...\nThe lock beeps and clicks open.\n\n";
+			cout << "You insert the East Door Code...\nThe east door lock beeps and clicks open!\n\n";
 			locations.rooms[3].isLocked = false;
-		}
 
-		for (int i = choice - 1; i < itemCount - 1; i++)
-		{
-			inventory[i] = inventory[i + 1];
+			for (int i = choice - 1; i < itemCount - 1; i++)
+			{
+				inventory[i] = inventory[i + 1];
+			}
+			itemCount--;
 		}
-		itemCount--;
+		else
+		{
+			cout << "You can't use that here! Try using it in front of the door in the starting room.\n\n";
+		}
 	}
 	else
 	{
