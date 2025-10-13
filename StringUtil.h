@@ -1,10 +1,9 @@
+#pragma once
 #ifndef STRINGUTIL_H
 #define STRINGUTIL_H
 #include <iostream>
 #include <string>
 #include <fstream>
-
-using namespace std;
 
 class stringUtil
 {

@@ -1,11 +1,871 @@
 ﻿  Game.cpp
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,9): error C3646: 'myString': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,9): error C3646: 'str': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(18,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,2): error C2535: 'stringUtil::stringUtil(void)': member function already defined or declared
+  (compiling source file 'Game.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(20,2):
+      see declaration of 'stringUtil::stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(24,19): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(26,15): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,9): error C3646: 'append': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,15): error C2059: syntax error: '('
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,41): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,9): error C3646: 'prepend': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,16): error C2059: syntax error: '('
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,42): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,9): error C3646: 'toLower': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,16): error C2059: syntax error: '('
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,9): error C3646: 'toUpper': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,16): error C2059: syntax error: '('
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,7): error C2535: 'bool stringUtil::find(void)': member function already defined or declared
+  (compiling source file 'Game.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,9): error C3646: 'replacement': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,20): error C2059: syntax error: '('
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,66): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(21,9): error C3646: 'itemName': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(21,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(22,9): error C3646: 'itemDescription': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(22,24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(32,7): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(32,2): error C2535: 'Item::Item(void)': member function already defined or declared
+  (compiling source file 'Game.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(26,2):
+      see declaration of 'Item::Item'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(38,9): error C3646: 'getName': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(38,16): error C2059: syntax error: '('
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(38,19): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(40,9): error C3646: 'getDescription': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(40,23): error C2059: syntax error: '('
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(40,26): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(28,3): error C2065: 'itemName': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(29,3): error C2065: 'itemDescription': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(34,3): error C2065: 'itemName': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(34,14): error C2065: 'name': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(35,3): error C2065: 'itemDescription': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(35,21): error C2065: 'desc': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(44,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(52,14): error C2661: 'Item::Item': no overloaded function takes 2 arguments
+  (compiling source file 'Game.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(52,14):
+      while trying to match the argument list '(const char [10], const char [36])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(56,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(56,41): error C2065: 'endl': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(57,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(57,33): error C2065: 'endl': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(65,15): error C2661: 'Item::Item': no overloaded function takes 2 arguments
+  (compiling source file 'Game.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(65,15):
+      while trying to match the argument list '(const char [15], const char [32])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(69,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(85,9): error C3646: 'roomName': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(85,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(86,9): error C3646: 'roomDescription': unknown override specifier
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(86,24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(94,7): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(94,2): error C2535: 'Room::Room(void)': member function already defined or declared
+  (compiling source file 'Game.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(92,2):
+      see declaration of 'Room::Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(96,7): error C2061: syntax error: identifier 'string'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(96,2): error C2535: 'Room::Room(void)': member function already defined or declared
+  (compiling source file 'Game.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(92,2):
+      see declaration of 'Room::Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(11,2): error C2065: 'roomName': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(12,2): error C2065: 'roomDescription': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(24,7): error C2511: 'Room::Room(std::string,std::string)': overloaded member function not found in 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(26,2): error C2065: 'roomName': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(27,2): error C2065: 'roomDescription': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(29,2): error C2597: illegal reference to non-static member 'Room::north'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(80,6):
+      see declaration of 'Room::north'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(30,2): error C2597: illegal reference to non-static member 'Room::south'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(81,6):
+      see declaration of 'Room::south'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(31,2): error C2597: illegal reference to non-static member 'Room::east'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(82,6):
+      see declaration of 'Room::east'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(32,2): error C2597: illegal reference to non-static member 'Room::west'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(83,6):
+      see declaration of 'Room::west'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(34,2): error C2597: illegal reference to non-static member 'Room::isLocked'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(88,7):
+      see declaration of 'Room::isLocked'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(35,2): error C2597: illegal reference to non-static member 'Room::inspected'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(89,7):
+      see declaration of 'Room::inspected'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(36,2): error C2597: illegal reference to non-static member 'Room::visited'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(90,7):
+      see declaration of 'Room::visited'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(39,7): error C2511: 'Room::Room(std::string,std::string,int,int,int,int)': overloaded member function not found in 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(41,2): error C2065: 'roomName': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(42,2): error C2065: 'roomDescription': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(44,2): error C2597: illegal reference to non-static member 'Room::north'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(80,6):
+      see declaration of 'Room::north'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(45,2): error C2597: illegal reference to non-static member 'Room::south'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(81,6):
+      see declaration of 'Room::south'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(46,2): error C2597: illegal reference to non-static member 'Room::east'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(82,6):
+      see declaration of 'Room::east'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(47,2): error C2597: illegal reference to non-static member 'Room::west'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(83,6):
+      see declaration of 'Room::west'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(49,2): error C2597: illegal reference to non-static member 'Room::isLocked'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(88,7):
+      see declaration of 'Room::isLocked'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(50,2): error C2597: illegal reference to non-static member 'Room::inspected'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(89,7):
+      see declaration of 'Room::inspected'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(51,2): error C2597: illegal reference to non-static member 'Room::visited'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(90,7):
+      see declaration of 'Room::visited'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(60,17): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(60,17):
+      'Room::Room': function does not take 2 arguments
+          C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(60,17):
+          while trying to match the argument list '(const char [14], const char [2])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(61,17): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(61,17):
+      'Room::Room': function does not take 2 arguments
+          C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(61,17):
+          while trying to match the argument list '(const char [11], const char [250])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(63,17): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(63,17):
+      'Room::Room': function does not take 2 arguments
+          C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(63,17):
+          while trying to match the argument list '(const char [11], const char [2])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(64,17): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(64,17):
+      'Room::Room': function does not take 2 arguments
+          C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(64,17):
+          while trying to match the argument list '(const char [10], const char [15])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(65,17): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(65,17):
+      'Room::Room': function does not take 2 arguments
+          C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(65,17):
+          while trying to match the argument list '(const char [10], const char [288])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(108,21): error C2039: 'toUpper': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(110,11): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(110,11):
+      while trying to match the argument list '(std::string, const char [5])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(114,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(114,16):
+      while trying to match the argument list '(std::string, const char [8])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(117,66): error C2039: 'getName': is not a member of 'Item'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(17,7):
+      see declaration of 'Item'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(117,125): error C2039: 'getDescription': is not a member of 'Item'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(17,7):
+      see declaration of 'Item'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(121,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(121,16):
+      while trying to match the argument list '(std::string, const char [5])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(125,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(125,16):
+      while trying to match the argument list '(std::string, const char [10])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(129,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(129,16):
+      while trying to match the argument list '(std::string, const char [4])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(133,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(133,16):
+      while trying to match the argument list '(std::string, const char [5])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(138,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(138,16):
+      while trying to match the argument list '(std::string, const char [6])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(157,43): error C2039: 'roomDescription': is not a member of 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(167,67): error C2039: 'roomName': is not a member of 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(171,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(171,16):
+      while trying to match the argument list '(std::string, const char [6])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(189,43): error C2039: 'roomDescription': is not a member of 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(199,67): error C2039: 'roomName': is not a member of 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(203,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(203,16):
+      while trying to match the argument list '(std::string, const char [5])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(222,43): error C2039: 'roomDescription': is not a member of 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(232,67): error C2039: 'roomName': is not a member of 'Room'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(73,7):
+      see declaration of 'Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(236,16): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(236,16):
+      while trying to match the argument list '(std::string, const char [5])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.cpp(236,16): error C1003: error count exceeds 100; stopping compilation
   main.cpp
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,9): error C3646: 'myString': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,9): error C3646: 'str': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(18,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,2): error C2535: 'stringUtil::stringUtil(void)': member function already defined or declared
+  (compiling source file 'main.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(20,2):
+      see declaration of 'stringUtil::stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(24,19): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(26,15): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,9): error C3646: 'append': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,15): error C2059: syntax error: '('
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,41): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,9): error C3646: 'prepend': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,16): error C2059: syntax error: '('
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,42): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,9): error C3646: 'toLower': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,16): error C2059: syntax error: '('
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,9): error C3646: 'toUpper': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,16): error C2059: syntax error: '('
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,7): error C2535: 'bool stringUtil::find(void)': member function already defined or declared
+  (compiling source file 'main.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,9): error C3646: 'replacement': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,20): error C2059: syntax error: '('
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,66): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(21,9): error C3646: 'itemName': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(21,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(22,9): error C3646: 'itemDescription': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(22,24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(32,7): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(32,2): error C2535: 'Item::Item(void)': member function already defined or declared
+  (compiling source file 'main.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(26,2):
+      see declaration of 'Item::Item'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(38,9): error C3646: 'getName': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(38,16): error C2059: syntax error: '('
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(38,19): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(40,9): error C3646: 'getDescription': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(40,23): error C2059: syntax error: '('
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(40,26): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(28,3): error C2065: 'itemName': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(29,3): error C2065: 'itemDescription': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(34,3): error C2065: 'itemName': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(34,14): error C2065: 'name': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(35,3): error C2065: 'itemDescription': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(35,21): error C2065: 'desc': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(44,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(52,14): error C2661: 'Item::Item': no overloaded function takes 2 arguments
+  (compiling source file 'main.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(52,14):
+      while trying to match the argument list '(const char [10], const char [36])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(56,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(56,41): error C2065: 'endl': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(57,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(57,33): error C2065: 'endl': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(65,15): error C2661: 'Item::Item': no overloaded function takes 2 arguments
+  (compiling source file 'main.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(65,15):
+      while trying to match the argument list '(const char [15], const char [32])'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(69,3): error C2065: 'cout': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(85,9): error C3646: 'roomName': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(85,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(86,9): error C3646: 'roomDescription': unknown override specifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(86,24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(94,7): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(94,2): error C2535: 'Room::Room(void)': member function already defined or declared
+  (compiling source file 'main.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(92,2):
+      see declaration of 'Room::Room'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(96,7): error C2061: syntax error: identifier 'string'
+  (compiling source file 'main.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(96,2): error C2535: 'Room::Room(void)': member function already defined or declared
+  (compiling source file 'main.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\Game.h(92,2):
+      see declaration of 'Room::Room'
+  
   StringUtil.cpp
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(23,19): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(73,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(89,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(105,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\gratu\OneDrive\Documents\GitHub\StringUtil.cpp(108,37): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,9): error C3646: 'myString': unknown override specifier
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,9): error C3646: 'str': unknown override specifier
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(18,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,2): error C2535: 'stringUtil::stringUtil(void)': member function already defined or declared
+  (compiling source file 'StringUtil.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(20,2):
+      see declaration of 'stringUtil::stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(24,19): error C2061: syntax error: identifier 'string'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(26,15): error C2061: syntax error: identifier 'string'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,9): error C3646: 'append': unknown override specifier
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,15): error C2059: syntax error: '('
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,41): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,9): error C3646: 'prepend': unknown override specifier
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,16): error C2059: syntax error: '('
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,42): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,9): error C3646: 'toLower': unknown override specifier
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,16): error C2059: syntax error: '('
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,9): error C3646: 'toUpper': unknown override specifier
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,16): error C2059: syntax error: '('
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,7): error C2535: 'bool stringUtil::find(void)': member function already defined or declared
+  (compiling source file 'StringUtil.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,9): error C3646: 'replacement': unknown override specifier
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,20): error C2059: syntax error: '('
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,66): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(11,2): error C2065: 'myString': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(12,2): error C2065: 'str': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(15,13): error C2511: 'stringUtil::stringUtil(std::string)': overloaded member function not found in 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(17,2): error C2065: 'myString': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(21,17): error C2511: 'int stringUtil::Length(std::string)': overloaded member function not found in 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(26,18): error C2511: 'char stringUtil::characterAt(std::string,int)': overloaded member function not found in 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(31,18): error C2511: 'bool stringUtil::equalTo(std::string,std::string)': overloaded member function not found in 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(43,20): error C2039: 'append': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(48,20): error C2039: 'prepend': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(53,20): error C2039: 'toLower': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(62,20): error C2039: 'toUpper': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(71,18): error C2511: 'bool stringUtil::find(std::string,std::string)': overloaded member function not found in 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(73,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(86,18): error C2511: 'bool stringUtil::find(std::string,std::string,int)': overloaded member function not found in 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(89,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(101,20): error C2039: 'replacement': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(105,16): error C2065: 'myString': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(105,40): error C2039: 'myString': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(107,3): error C2065: 'myString': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(107,35): error C2039: 'myString': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(107,66): error C2039: 'myString': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(108,22): error C2039: 'myString': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(110,9): error C2065: 'myString': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.cpp(115,10): error C2065: 'myString': undeclared identifier
   test_StringUtil.cpp
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,9): error C3646: 'myString': unknown override specifier
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(12,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,9): error C3646: 'str': unknown override specifier
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(16,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(18,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,13): error C2061: syntax error: identifier 'string'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(22,2): error C2535: 'stringUtil::stringUtil(void)': member function already defined or declared
+  (compiling source file 'test_StringUtil.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(20,2):
+      see declaration of 'stringUtil::stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(24,19): error C2061: syntax error: identifier 'string'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(26,15): error C2061: syntax error: identifier 'string'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,9): error C3646: 'append': unknown override specifier
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,15): error C2059: syntax error: '('
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(28,41): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,9): error C3646: 'prepend': unknown override specifier
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,16): error C2059: syntax error: '('
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(30,42): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,9): error C3646: 'toLower': unknown override specifier
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,16): error C2059: syntax error: '('
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(32,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,9): error C3646: 'toUpper': unknown override specifier
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,16): error C2059: syntax error: '('
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(34,28): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,12): error C2061: syntax error: identifier 'string'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(38,7): error C2535: 'bool stringUtil::find(void)': member function already defined or declared
+  (compiling source file 'test_StringUtil.cpp')
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,9): error C3646: 'replacement': unknown override specifier
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,20): error C2059: syntax error: '('
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(40,66): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'test_StringUtil.cpp')
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(11,13): error C2065: 'str': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(11,21): error C2065: 'str': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(29,18): error C2065: 'str': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(29,37): error C2065: 'str': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(48,6): error C2660: 'stringUtil::equalTo': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(26,7):
+      see declaration of 'stringUtil::equalTo'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(48,6):
+      while trying to match the argument list '(std::string, std::string)'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(68,6): error C3861: 'append': identifier not found
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(88,6): error C3861: 'prepend': identifier not found
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(106,6): error C3861: 'toLower': identifier not found
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(124,6): error C3861: 'toUpper': identifier not found
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(143,6): error C2660: 'stringUtil::find': function does not take 2 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(143,6):
+      while trying to match the argument list '(std::string, std::string)'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(163,6): error C2660: 'stringUtil::find': function does not take 3 arguments
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(36,7):
+      see declaration of 'stringUtil::find'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(163,6):
+      while trying to match the argument list '(std::string, std::string, int)'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(180,2): error C2065: 'myString': undeclared identifier
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(183,12): error C2039: 'myString': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(186,10): error C2039: 'myString': is not a member of 'stringUtil'
+      C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\StringUtil.h(8,7):
+      see declaration of 'stringUtil'
+  
+C:\Users\s258021\Documents\GitHub\pennie-intro-assessment\test_StringUtil.cpp(188,6): error C3861: 'replacement': identifier not found
   Generating Code...
-  Project4.vcxproj -> C:\Users\gratu\OneDrive\Documents\GitHub\x64\Debug\Project4.exe

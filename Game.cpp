@@ -53,7 +53,7 @@ Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, in
 
 Locations::Locations(int size)
 {
-	if (size > 5) return; // stopping the function early if size exceeds amount of rooms
+	//if (size > 5) return; // stopping the function early if size exceeds amount of rooms
 
 	// object array, using custom constructor in room class, name & desc
 	
@@ -73,24 +73,14 @@ Locations::Locations(int size)
 	rooms[2].roomItem = Item();
 	rooms[3].roomItem = Item();
 	rooms[4].roomItem = Code();
-
-	// vvv if s room doesn't connect to something, it stays at the default
-	rooms[0].setNorth(1);
-	rooms[0].setSouth(2);
-	rooms[0].setEast(3);
-	rooms[0].setWest(4);
-
-	rooms[1].setSouth(0);
-	rooms[2].setNorth(0);
-	rooms[3].setWest(0);
-	rooms[4].setEast(0);
 }
 
-Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
+Locations::Locations() : Locations(5){} // default constructor runs this ^^^^
 
 Player::Player()
 {
 	itemCount = 0;
+	currentRoom = 0;
 }
 
 void Player::playGame()
@@ -108,9 +98,7 @@ void Player::playGame()
 	if (locations.rooms[currentRoom].visited) // checks if the player has been in a room once before to avoid redundancy
 	{
 		cout << "You haven't found anything of use yet! Try looking around first." << endl << endl;
-		return;
 	}
-
 
 	while (true)
 	{
@@ -119,18 +107,18 @@ void Player::playGame()
 
 		string cmd = util.toUpper(command);
 
-		if (cmd == "HELP")
+		if (util.find(cmd, "HELP"))
 		{
 			showHelp();
 		}
-		else if (cmd == "INSPECT")
+		else if (util.find(cmd, "INSPECT"))
 		{
 			cout << "You take a look around the room..." << endl;
 			cout << "You found " << locations.rooms[currentRoom].roomItem.getName() << "! " << locations.rooms[currentRoom].roomItem.getDescription() << endl << endl;
 
 			locations.rooms[currentRoom].inspected = true; // checks if the room has been inspected to prevent the player being able to prematurely grab an item before inspecting the room
 		}
-		else if (cmd == "TAKE")
+		else if (util.find(cmd, "TAKE"))
 		{
 			pickUpItem();
 		}
@@ -149,78 +137,132 @@ void Player::playGame()
 		}
 		else if (util.find(cmd, "NORTH"))
 		{
-			currentRoom = 1;
 
-			if (!locations.rooms[1].visited)
+			int nextRoom = locations.rooms[currentRoom].north;
+
+			if (nextRoom == -1)
 			{
-				cout << locations.rooms[1].roomDescription << endl;
-				cout << "A faint glint on an uncovered, dusty side table catches your eye." << endl << endl;
-				locations.rooms[1].visited = true;
+				cout << "You can't go that way!" << endl << endl; // if the next room is equal to -1, the room doesn't exist
+			}
+			else if (locations.rooms[nextRoom].isLocked)
+			{
+				cout << "The door is locked. Maybe you need a key?" << endl << endl; // if there is a room but it's locked, the player can't progress
 			}
 			else
 			{
-				cout << "You return to the north room.\n\n";
+				currentRoom = nextRoom; // if the room exists and is unlocked, the player can progress & updates currentRoom variable
+
+				if (!locations.rooms[currentRoom].visited)
+				{
+					cout << locations.rooms[currentRoom].roomDescription << endl; // if the room hasn't been visited then it prints its original description.
+
+					if (currentRoom == 1) // vvv flavor-based text for immersion
+					{
+						cout << "A faint glint on an uncovered, dusty side table catches your eye." << endl << endl;
+					}
+					locations.rooms[currentRoom].visited = true; // mark as visited
+				}
+				else
+				{
+					cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n"; // if the player has already visited a room, print shorter text
+				}
 			}
 		}
 		else if (util.find(cmd, "SOUTH"))
 		{
-			currentRoom = 2;
+			int nextRoom = locations.rooms[currentRoom].south;
 
-			if (!locations.rooms[2].visited)
+			if (nextRoom == -1)
 			{
-				cout << locations.rooms[2].roomDescription << endl;
-				cout << "..." << endl << endl;
-				locations.rooms[2].visited = true;
+				cout << "You can't go that way!" << endl << endl;
 			}
-			else
-			{
-				cout << "You return to the south room.\n\n";
-			}
-			
-		}
-		else if (util.find(cmd, "EAST"))
-		{
-			if (locations.rooms[3].isLocked)
-			{
-				cout << "Looks like you'll need a 4-digit code to open this door." << endl << endl;
-			}
-			else
-			{
-				currentRoom = 3;
-
-				if (!locations.rooms[3].visited)
-				{
-					cout << locations.rooms[3].roomDescription << endl;
-					cout << "..." << endl << endl;
-					locations.rooms[3].visited = true;
-				}
-				else
-				{
-					cout << "You return to the east room.\n\n";
-				}
-			}
-		}
-		else if (util.find(cmd, "WEST"))
-		{
-			if (locations.rooms[4].isLocked)
+			else if (locations.rooms[nextRoom].isLocked)
 			{
 				cout << "The door is locked. Maybe you need a key?" << endl << endl;
 			}
 			else
 			{
-				currentRoom = 4;
+				currentRoom = nextRoom;
 
-				if (!locations.rooms[4].visited)
+				if (!locations.rooms[currentRoom].visited)
 				{
-					cout << locations.rooms[4].roomDescription << endl;
-					cout << "There seemed to be something hidden inside of the AC...\n\n";
-					locations.rooms[4].visited = true;
+					cout << locations.rooms[currentRoom].roomDescription << endl;
+
+					if (currentRoom == 2)
+					{
+						cout << " " << endl << endl;
+					}
+					locations.rooms[currentRoom].visited = true;
 				}
 				else
 				{
-					cout << "You return to the west room.\n\n";
+					cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
 				}
-				
+			}
+		}
+		else if (util.find(cmd, "EAST"))
+		{
+
+			int nextRoom = locations.rooms[currentRoom].east;
+
+			if (nextRoom == -1)
+			{
+				cout << "You can't go that way!" << endl << endl; 
+			}
+			else if (locations.rooms[nextRoom].isLocked)
+			{
+				cout << "The door is locked. Maybe you need a key?" << endl << endl; 
+			}
+			else
+			{
+				currentRoom = nextRoom; 
+
+				if (!locations.rooms[currentRoom].visited)
+				{
+					cout << locations.rooms[currentRoom].roomDescription << endl;
+
+					if (currentRoom == 3)
+					{
+						cout << " " << endl << endl;
+					}
+					locations.rooms[currentRoom].visited = true;
+				}
+				else
+				{
+					cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
+				}
+			}
+		}
+		else if (util.find(cmd, "WEST"))
+		{
+			int nextRoom = locations.rooms[currentRoom].west;
+
+			if (nextRoom == -1)
+			{
+				cout << "You can't go that way!" << endl << endl;
+			}
+			else if (locations.rooms[nextRoom].isLocked)
+			{
+				cout << "The door is locked. Maybe you need a key?" << endl << endl;
+			}
+			else
+			{
+				currentRoom = nextRoom;
+
+				if (!locations.rooms[currentRoom].visited)
+				{
+					cout << locations.rooms[currentRoom].roomDescription << endl;
+
+					if (currentRoom == 4)
+					{
+						cout << "There seems to be something shining behind the AC cover..." << endl << endl;
+					}
+					locations.rooms[currentRoom].visited = true;
+				}
+				else
+				{
+					cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
+				}
 			}
 		}
 		else if (util.find(cmd, "BACK"))
@@ -351,10 +393,7 @@ void Player::useItem()
 			cout << "You insert the East Door Code...\nThe east door lock beeps and clicks open!\n\n";
 			locations.rooms[3].isLocked = false;
 
-			for (int i = choice - 1; i < itemCount - 1; i++)
-			{
-				inventory[i] = inventory[i + 1];
-			}
+			inventory[itemCount - 1] = Item(); // resets last item to default
 			itemCount--;
 		}
 		else
@@ -366,6 +405,4 @@ void Player::useItem()
 	{
 		selectedItem.Use();
 	}
-}	
-
-void Player::move(const)
+}

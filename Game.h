@@ -3,8 +3,6 @@
 #include <string>
 #include <fstream>
 
-using namespace std;
-
 class Entity
 {
 protected:
@@ -76,12 +74,13 @@ class Room
 {
 private:
 
+
+public:
+
 	int north;
 	int south;
 	int east;
 	int west;
-
-public:
 
 	string roomName;
 	string roomDescription;
@@ -95,18 +94,6 @@ public:
 	Room(string roomName, string roomDescription); // custom constructor
 
 	Room(string roomName, string roomDescription, int setNorth, int setSouth, int setEast, int setWest);
-
-	int getNorth() const { return north; }	
-	int getSouth() const { return south; }	
-	int getEast() const { return east; }	
-	int getWest() const { return west; }	
-
-	void setNorth(int value) { north = value; } 
-	void setSouth(int value) { south = value; } 
-	void setEast(int value) { west = value; } 
-	void setWest(int value) { east = value; } 
-	// ^^^ allow other parts of the program to read the value of n, s, e, w
-
 };
 
 class Locations
@@ -134,7 +121,6 @@ public:
 	void pickUpItem();
 	void showInventory();
 	void useItem();
-
 };
 
 
