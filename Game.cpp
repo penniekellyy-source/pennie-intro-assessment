@@ -287,10 +287,10 @@ void Player::showHelp()
 {
 	cout << "\n === Command list ===\n\n";
 	cout << "- 'Help' - Command list\n";
-	cout << "- 'Go North' - Move to north room\n";
-	cout << "- 'Go South' - Move to south room\n";
-	cout << "- 'Go East' - Move to east room\n";
-	cout << "- 'Go West' - Move to west room\n";
+	cout << "- 'North' - Move north of the current room\n";
+	cout << "- 'South' - Move south of the current room\n";
+	cout << "- 'East' - Move east of the current room\n";
+	cout << "- 'West' - Move west of the current room\n";
 	cout << "- 'Quit' - Quit game\n";
 	cout << "- 'Inspect' - Look around the current room\n";
 	cout << "- 'Take' - Pick up item\n";
