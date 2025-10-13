@@ -57,7 +57,7 @@ Locations::Locations(int size)
 
 	// object array, using custom constructor in room class, name & desc
 	
-	rooms[0] = Room("Starting Room", " ");
+	rooms[0] = Room("Starting Room", " ", 1, 2, 3, 4);
 	rooms[1] = Room("North Room", "You cautiously step into the north room, the floor creaking beneath you.\n\nYou were immediately greeted by the smell of freshly burnt sage,"
 	" the air thick with dust.\nThe room was empty save for a few sets of furniture covered with thick white cloths.\n");
 	rooms[2] = Room("South Room", " ");

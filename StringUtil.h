@@ -5,16 +5,18 @@
 #include <string>
 #include <fstream>
 
+using namespace std;
+
 class stringUtil
 {
 private:
-	
+
 	string myString;
 
 public:
 
 	string str;
-	
+
 	int Length(string str);
 
 	stringUtil();
@@ -42,11 +44,11 @@ public:
 	void readFromConsole();
 
 	void writeToConsole();
-	
+
 	bool test_length();
 
 	bool test_characterAt();
-	
+
 	bool test_equalTo();
 
 	bool test_append();
@@ -58,7 +60,7 @@ public:
 	bool test_toUpper();
 
 	bool test_find();
-	
+
 	bool test_findSkip();
 
 	bool test_replacement();
