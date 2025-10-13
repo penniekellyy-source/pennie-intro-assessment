@@ -53,7 +53,7 @@ Room::Room(string name, string desc, int setNorth, int setSouth, int setEast, in
 
 Locations::Locations(int size)
 {
-	if (size > 4) return; // stopping the function early if size exceeds amount of rooms
+	if (size > 5) return; // stopping the function early if size exceeds amount of rooms
 
 	// object array, using custom constructor in room class, name & desc
 	
@@ -73,6 +73,17 @@ Locations::Locations(int size)
 	rooms[2].roomItem = Item();
 	rooms[3].roomItem = Item();
 	rooms[4].roomItem = Code();
+
+	// vvv if s room doesn't connect to something, it stays at the default
+	rooms[0].setNorth(1);
+	rooms[0].setSouth(2);
+	rooms[0].setEast(3);
+	rooms[0].setWest(4);
+
+	rooms[1].setSouth(0);
+	rooms[2].setNorth(0);
+	rooms[3].setWest(0);
+	rooms[4].setEast(0);
 }
 
 Locations::Locations() : Locations(4){} // default constructor runs this ^^^^
@@ -356,3 +367,5 @@ void Player::useItem()
 		selectedItem.Use();
 	}
 }	
+
+void Player::move(const)
