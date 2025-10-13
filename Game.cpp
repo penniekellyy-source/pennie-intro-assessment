@@ -58,10 +58,14 @@ Locations::Locations(int size)
 	// object array, using custom constructor in room class, name & desc
 	
 	rooms[0] = Room("Starting Room", " ", 1, 2, 3, 4);
+
 	rooms[1] = Room("North Room", "You cautiously step into the north room, the floor creaking beneath you.\n\nYou were immediately greeted by the smell of freshly burnt sage,"
 	" the air thick with dust.\nThe room was empty save for a few sets of furniture covered with thick white cloths.\n");
+
 	rooms[2] = Room("South Room", " ");
+
 	rooms[3] = Room("East Room", "The east room ");
+
 	rooms[4] = Room("West Room", "You step inside the west room, your body temperature instantly dropping. The air is colder in here,\nthe faint hum of the AC in the corner"
 	" drowning out the silence.\n\nUnlike the rest of the building, the floors were poorly carpeted and the walls were covered\nwith a dull floral wallpaper.\n");
 	
@@ -88,7 +92,9 @@ void Player::playGame()
 	cout << "You wake up in an unfamiliar room. It smells of mildew, and the faint sound of water dripping\nfrom the ceiling can be heard.\n\nThe distressed wooden planks beneath"
 	" you are damp and noisy as you stand up and dust yourself off,\ntaking note of your surroundings.\n\nYou seemed to be in a very small room with one door on each wall that" 
 	" surrounded you. You wonder\nif the rooms' contents can give you answers as to how you wound up here... and maybe how to get out.\n\n";
+
 	cout << "Maybe you should look around...?\n\n";
+
 	cout << "Type 'help' for a list of commands." << endl << endl;
 
 	string command;
