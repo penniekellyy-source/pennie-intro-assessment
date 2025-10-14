@@ -9,12 +9,47 @@ class Entity
 {
 protected:
 
+	int entityAttack;
+	int entityHealth;
+	string entityName;
 
 public:
 
 	int currentRoom;
 
-};
+	Entity()
+	{
+		entityName = "Unknown";
+		entityHealth = 100;
+		entityAttack = 10;
+		currentRoom = 0;
+	}
+
+	Entity(string name, int health, int attack)
+	{
+		entityName = name;
+		entityHealth = health;
+		entityAttack = attack;
+		currentRoom = 0;
+	}
+
+	string getEntityName() { return entityName; }
+
+	int getEntityHealth() { return entityHealth; }
+
+	int getEntityAttack() { return entityAttack; }
+
+	void takeDamage(int damage)
+	{
+		entityHealth -= damage;
+		if (entityHealth < 0) entityHealth = 0;
+	}
+
+	bool isDead()
+	{
+		return entityHealth <= 0;
+	}
+}; 
 
 class Item
 {
@@ -37,9 +72,9 @@ public:
 		itemDescription = desc;
 	}
 
-	string getName() { return itemName; }
+	string getItemName() { return itemName; }
 
-	string getDescription() { return itemDescription; }
+	string getItemDescription() { return itemDescription; }
 
 	virtual void Use()
 	{
@@ -72,6 +107,28 @@ public:
 	}
 };
 
+class Enemy : public Entity
+{
+public:
+
+	bool isDefeated;
+
+	Enemy() : Entity("Unknown", 100, 10)
+	{
+		isDefeated = false;
+	}
+
+	Enemy(string name, int health, int attack) : Entity(name, health, attack)
+	{
+		isDefeated = false;
+	}
+
+	void defeat()
+	{
+		isDefeated = true;
+	}
+};
+
 class Room
 {
 private:
@@ -87,15 +144,20 @@ public:
 	string roomName;
 	string roomDescription;
 	Item roomItem;
+
 	bool isLocked;
 	bool inspected;
 	bool visited;
+
+	Enemy roomEnemy;
+	bool hasEnemy;
 
 	Room(); // default constructor
 
 	Room(string roomName, string roomDescription); // custom constructor
 
 	Room(string roomName, string roomDescription, int setNorth, int setSouth, int setEast, int setWest);
+
 };
 
 class Locations
@@ -111,15 +173,19 @@ class Player : public Entity
 {
 public:
 
-	Player();
-	void playGame();
-	void showHelp();
-
-	Locations locations;
+	Player() : Entity("Player", 100, 10)
+	{
+		itemCount = 0;
+		currentRoom = 0;
+	}
 
 	Item inventory[5]; // max inventory space
 	int itemCount; // how many inventory slots are filled
 
+	Locations locations;
+
+	void playGame();
+	void showHelp();
 	void pickUpItem();
 	void showInventory();
 	void useItem();

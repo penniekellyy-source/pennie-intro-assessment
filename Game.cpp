@@ -81,12 +81,6 @@ Locations::Locations(int size)
 
 Locations::Locations() : Locations(5){} // default constructor runs this ^^^^
 
-Player::Player()
-{
-	itemCount = 0;
-	currentRoom = 0;
-}
-
 void Player::playGame()
 {
 	cout << "You wake up in an unfamiliar room. It smells of mildew, and the faint sound of water dripping\nfrom the ceiling can be heard.\n\nThe distressed wooden planks beneath"
@@ -120,7 +114,7 @@ void Player::playGame()
 		else if (util.find(cmd, "INSPECT"))
 		{
 			cout << "You take a look around the room..." << endl;
-			cout << "You found " << locations.rooms[currentRoom].roomItem.getName() << "! " << locations.rooms[currentRoom].roomItem.getDescription() << endl << endl;
+			cout << "You found " << locations.rooms[currentRoom].roomItem.getItemName() << "! " << locations.rooms[currentRoom].roomItem.getItemDescription() << endl << endl;
 
 			locations.rooms[currentRoom].inspected = true; // checks if the room has been inspected to prevent the player being able to prematurely grab an item before inspecting the room
 		}
@@ -316,7 +310,7 @@ void Player::pickUpItem()
 
 	Item currentItem = locations.rooms[currentRoom].roomItem; // gets item in current room player is in
 
-	if (currentItem.getName() == "Nothing") // checks if the room has an item, default name means room is empty
+	if (currentItem.getItemName() == "Nothing") // checks if the room has an item, default name means room is empty
 	{
 		cout << "There is nothing of use here." << endl << endl;
 		return;
@@ -325,7 +319,7 @@ void Player::pickUpItem()
 	inventory[itemCount] = currentItem; // add current item into player's inventory array
 	itemCount++; // increases number of items player has
 
-	cout << "You picked up " << currentItem.getName() << "!" << endl << endl;
+	cout << "You picked up " << currentItem.getItemName() << "!" << endl << endl;
 
 	locations.rooms[currentRoom].roomItem = Item(); // resets to default to remove item from the room
 }
@@ -341,7 +335,7 @@ void Player::showInventory()
 	cout << "=== Inventory ===" << endl << endl;
 	for (int i = 0; i < itemCount; i++)
 	{
-		cout << "- " << inventory[i].getName() << " : " << inventory[i].getDescription() << endl;
+		cout << "- " << inventory[i].getItemName() << " : " << inventory[i].getItemDescription() << endl;
 	}
 }
 
@@ -356,7 +350,7 @@ void Player::useItem()
 	cout << "Which item would you like to use?" << endl << endl;
 	for (int i = 0; i < itemCount; i++)
 	{
-		cout << i + 1 << ". " << inventory[i].getName() << endl << endl; // converts 0, 1, 2... to 1, 2, 3..., calls getName() and prints
+		cout << i + 1 << ". " << inventory[i].getItemName() << endl << endl; // converts 0, 1, 2... to 1, 2, 3..., calls getName() and prints
 	}
 
 	string input;
@@ -373,7 +367,7 @@ void Player::useItem()
 	cout << endl;
 
 	// manually check type instead of polymorphism
-	if (selectedItem.getName() == "Rusty Key")
+	if (selectedItem.getItemName() == "Rusty Key")
 	{
 		if (currentRoom == 0)
 		{
@@ -392,7 +386,7 @@ void Player::useItem()
 			cout << "You can't use that here! Try using it in front of the west door in the starting room.\n\n";
 		}
 	}
-	else if (selectedItem.getName() == "East Door Code")
+	else if (selectedItem.getItemName() == "East Door Code")
 	{
 		if (currentRoom == 0)
 		{
