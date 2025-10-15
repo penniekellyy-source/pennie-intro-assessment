@@ -13,16 +13,14 @@ Room::Room()
 	roomName = " ";
 	roomDescription = " ";
 
-	north = -1; // -1 = there is no room in this direction
-	south = -1;
-	east = -1;
-	west = -1;
+	north = south = east = west = -1; // -1 = there is no room in this direction
 
 	isLocked = false;
 	inspected = false;
 	visited = false;
 
 	hasEnemy = false;
+	roomEnemy = Enemy("None", 0, 0);
 	roomEnemy.defeat();
 }
 
@@ -31,10 +29,7 @@ Room::Room(string name, string desc)
 	roomName = name;
 	roomDescription = desc;
 
-	north = -1;
-	south = -1;
-	east = -1;
-	west = -1;
+	north = south = east = west = -1;
 
 	isLocked = false;
 	inspected = false;
@@ -62,33 +57,44 @@ Locations::Locations(int size)
 
 	// object array, using custom constructor in room class, name & desc
 	
-	rooms[0] = Room("Starting Room",
-		"You are in a small, dimly lit room with doors on all sides.",
+	rooms[0] = Room(
+		"Starting Room",
+		"You awaken in a quiet, unfamiliar room. The air is cool and faintly damp, and somewhere nearby, water drips at a steady rhythm.\n"
+		"The old wooden floor creaks gently beneath your weight as you rise. Four doors stand on each wall, their faded paint suggesting years of neglect.\n"
+		"A strange stillness lingers here—not threatening, but unsettling. Perhaps exploring will lead to answers.\n\n",
 		1, 2, 3, 4);
 
-	rooms[1] = Room("North Room",
-		"You cautiously step into the north room, the floor creaking beneath you.\n\n"
-		"You were immediately greeted by the smell of freshly burnt sage, the air thick with dust.\n"
-		"The room was empty save for a few sets of furniture covered with thick white cloths.\n",
+	rooms[1] = Room(
+		"North Room",
+		"You step into the north room. The wooden floor groans softly underfoot.\n"
+		"A faint scent of sage clings to the dusty air, as though someone was here long ago.\n"
+		"Furniture sits beneath pale cloths, their shapes suggesting forgotten lives. The silence is almost too perfect.\n\n",
 		-1, 0, -1, -1);
 
-	rooms[2] = Room("South Room",
-		"The south room is eerily quiet. Dust floats in the air.",
+	rooms[2] = Room(
+		"South Room",
+		"The south room greets you with a muted calm. Dust drifts lazily in the pale light,\n"
+		"and the walls seem to hum softly with the building's age. Something about this room feels like it's waiting for something to happen.\n\n"
+		"You notice an oddly positioned bookshelf on the north wall of the room.",
 		5, -1, -1, -1);
 
-	rooms[3] = Room("East Room",
-		"The east room smells of mold. Something shuffles in the shadows.",
+	rooms[3] = Room(
+		"East Room",
+		"The east room carries a faint, earthy smell of damp wood. The corners are dim, and the air feels heavier here.\n"
+		"You catch a glimpse of movement—or perhaps it was just the shifting of the old house.\n",
 		-1, -1, -1, 0);
 
-	rooms[4] = Room("West Room",
-		"You step inside the west room, your body temperature instantly dropping. The air is colder in here,\n"
-		"the faint hum of the AC in the corner drowning out the silence.\n\n"
-		"Unlike the rest of the building, the floors were poorly carpeted and the walls were covered\n"
-		"with a dull floral wallpaper.\n",
+	rooms[4] = Room(
+		"West Room",
+		"You step inside the west room, and a cool draft brushes against your skin.\n"
+		"The faint hum of an unseen vent breaks the silence.\n"
+		"The worn carpet and fading floral wallpaper suggest this room was once cared for, long before it was abandoned to time.\n\n",
 		-1, -1, 0, -1);
 
-	rooms[5] = Room("Hidden Room",
-		"A small secret room with a healing potion.",
+	rooms[5] = Room(
+		"Hidden Room",
+		"You find a narrow opening that leads into a small hidden chamber.\n"
+		"It's quiet and unexpectedly warm here, as if untouched by the outside chill.\n\n",
 		-1, 2, -1, -1);
 	
 	rooms[3].isLocked = true;
@@ -103,23 +109,28 @@ Locations::Locations(int size)
 
 	rooms[1].roomEnemy = Enemy("Goblin", 30, 5);
 	rooms[1].hasEnemy = true;
+	rooms[1].roomEnemy.isDefeated = false;
 
 	rooms[3].roomEnemy = Enemy("Skeleton", 50, 10);
 	rooms[3].hasEnemy = true;
+	rooms[3].roomEnemy.isDefeated = false;
 
-	rooms[4].roomEnemy = Enemy("Zombiw", 70, 15);
+	rooms[4].roomEnemy = Enemy("Zombie", 70, 15);
 	rooms[4].hasEnemy = true;
+	rooms[4].roomEnemy.isDefeated = false;
 
-	rooms[5].hasEnemy = false; // safe room
+	rooms[0].hasEnemy = false; // starting room
+	rooms[2].hasEnemy = false; // safe room
+	rooms[5].hasEnemy = false; // <<<
 }
 
 Locations::Locations() : Locations(6){} // default constructor runs this ^^^^
 
 void Player::playGame()
 {
-	cout << "You wake up in an unfamiliar room. It smells of mildew, and the faint sound of water dripping\nfrom the ceiling can be heard.\n\n";
-	cout << "The distressed wooden planks beneath you are damp and noisy as you stand up and dust yourself off,\ntaking note of your surroundings.\n\n";
-	cout << "You seem to be in a very small room with one door on each wall.\nYou wonder if the rooms' contents can give you answers about how you wound up here...\n";
+	cout << "You awaken in a quiet, unfamiliar room. The air is cool and faintly damp, and somewhere nearby, water drips at a steady rhythm.\n";
+	cout << "The old wooden floor creaks gently beneath your weight as you rise. Four doors stand on each wall, their faded paint suggesting years of neglect.\n";
+	cout << "A strange stillness lingers here—not threatening, but unsettling. Perhaps exploring will lead to answers.\n\n";
 	cout << "Maybe you should look around...?\n\n";
 	cout << "Type 'help' for a list of commands." << endl << endl;
 
@@ -150,8 +161,12 @@ void Player::playGame()
 		else if (util.find(cmd, "INSPECT"))
 		{
 			cout << "You take a look around the room..." << endl;
-			cout << "You found " << locations.rooms[currentRoom].roomItem.getItemName()
+			if (locations.rooms[currentRoom].roomItem.getItemName() == "Nothing")
+				cout << "You didn’t find anything of use." << endl << endl;
+			else
+				cout << "You found " << locations.rooms[currentRoom].roomItem.getItemName()
 				<< "! " << locations.rooms[currentRoom].roomItem.getItemDescription() << endl << endl;
+
 			locations.rooms[currentRoom].inspected = true;
 		}
 
@@ -183,173 +198,32 @@ void Player::playGame()
 		// ==== MOVE NORTH ====
 		else if (util.find(cmd, "NORTH"))
 		{
-			int nextRoom = locations.rooms[currentRoom].north;
-			if (nextRoom == -1) cout << "You can't go that way!" << endl << endl;
-			else if (locations.rooms[nextRoom].isLocked) cout << "The door is locked. Maybe you need a key?" << endl << endl;
-			else
-			{
-				currentRoom = nextRoom;
-
-				// checks for enemies first & makes sure it is impossible to accidentally battle an "unknown enemy"
-				if (locations.rooms[currentRoom].hasEnemy)
-				{
-					if (!locations.rooms[currentRoom].roomEnemy.isDefeated)
-					{
-						int encounterChance = rand() % 100;
-						if (encounterChance < 85)
-						{
-							battle(locations.rooms[currentRoom].roomEnemy);
-						}
-						else
-						{
-							cout << "You hear movement nearby, but nothing happens...\n\n";
-						}
-					}
-				}
-
-				if (!isDead())
-				{
-					if (!locations.rooms[currentRoom].visited)
-					{
-						cout << locations.rooms[currentRoom].roomDescription << endl;
-						locations.rooms[currentRoom].visited = true;
-					}
-					else
-					{
-						cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
-					}
-				}
-			}
+			moveTo(locations.rooms[currentRoom].north);
 		}
 
 		// ==== MOVE SOUTH ====
 		else if (util.find(cmd, "SOUTH"))
 		{
-			int nextRoom = locations.rooms[currentRoom].south;
-			if (nextRoom == -1) cout << "You can't go that way!" << endl << endl;
-			else if (locations.rooms[nextRoom].isLocked) cout << "The door is locked. Maybe you need a key?" << endl << endl;
-			else
-			{
-				currentRoom = nextRoom;
-
-				if (locations.rooms[currentRoom].hasEnemy)
-				{
-					if (!locations.rooms[currentRoom].roomEnemy.isDefeated)
-					{
-						int encounterChance = rand() % 100;
-						if (encounterChance < 85)
-						{
-							battle(locations.rooms[currentRoom].roomEnemy);
-						}
-						else
-						{
-							cout << "You hear movement nearby, but nothing happens...\n\n";
-						}
-					}
-				}
-
-				if (!isDead())
-				{
-					if (!locations.rooms[currentRoom].visited)
-					{
-						cout << locations.rooms[currentRoom].roomDescription << endl;
-						locations.rooms[currentRoom].visited = true;
-					}
-					else
-					{
-						cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
-					}
-						
-				}
-			}
+			moveTo(locations.rooms[currentRoom].south);
 		}
 
 		// ==== MOVE EAST ====
 		else if (util.find(cmd, "EAST"))
 		{
-			int nextRoom = locations.rooms[currentRoom].east;
-			if (nextRoom == -1) cout << "You can't go that way!" << endl << endl;
-			else if (locations.rooms[nextRoom].isLocked) cout << "The door is locked. Maybe you need a key?" << endl << endl;
-			else
-			{
-				currentRoom = nextRoom;
-
-				if (locations.rooms[currentRoom].hasEnemy)
-				{
-					if (!locations.rooms[currentRoom].roomEnemy.isDefeated)
-					{
-						int encounterChance = rand() % 100;
-						if (encounterChance < 85)
-						{
-							battle(locations.rooms[currentRoom].roomEnemy);
-						}
-						else
-						{
-							cout << "You hear movement nearby, but nothing happens...\n\n";
-						}
-					}
-				}
-
-				if (!isDead())
-				{
-					if (!locations.rooms[currentRoom].visited)
-					{
-						cout << locations.rooms[currentRoom].roomDescription << endl;
-						locations.rooms[currentRoom].visited = true;
-					}
-					else
-					{
-						cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
-					}
-						
-				}
-			}
+			moveTo(locations.rooms[currentRoom].east);
 		}
 
 		// ==== MOVE WEST ====
 		else if (util.find(cmd, "WEST"))
 		{
-			int nextRoom = locations.rooms[currentRoom].west;
-			if (nextRoom == -1) cout << "You can't go that way!" << endl << endl;
-			else if (locations.rooms[nextRoom].isLocked) cout << "The door is locked. Maybe you need a key?" << endl << endl;
-			else
-			{
-				currentRoom = nextRoom;
-
-				if (locations.rooms[currentRoom].hasEnemy)
-				{
-					if (!locations.rooms[currentRoom].roomEnemy.isDefeated)
-					{
-						int encounterChance = rand() % 100;
-						if (encounterChance < 85)
-						{
-							battle(locations.rooms[currentRoom].roomEnemy);
-						}
-						else
-						{
-							cout << "You hear movement nearby, but nothing happens...\n\n";
-						}
-					}
-				}
-
-				if (!isDead())
-				{
-					if (!locations.rooms[currentRoom].visited)
-					{
-						cout << locations.rooms[currentRoom].roomDescription << endl;
-						locations.rooms[currentRoom].visited = true;
-					}
-					else
-						cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
-				}
-			}
+			moveTo(locations.rooms[currentRoom].west);
 		}
 
 		// ==== BACK ====
 		else if (util.find(cmd, "BACK"))
 		{
 			currentRoom = 0;
-			cout << "You find yourself once again in the confined room with doors on all sides and no clear answers.\n\n";
+			cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
 		}
 
 		// ==== UNKNOWN ====
@@ -373,8 +247,6 @@ void Player::showHelp()
 	cout << "- 'Take' - Pick up item\n";
 	cout << "- 'Inventory' - Inventory list\n";
 	cout << "- 'Use' - Use an item\n\n";
-	//cout << "- 'Stats' - Display player stats\n\n";
-
 }
 
 void Player::pickUpItem()
@@ -484,7 +356,8 @@ void Player::useItem()
 			cout << "You insert the East Door Code...\nThe east door lock beeps and clicks open!\n\n";
 			locations.rooms[3].isLocked = false;
 
-			inventory[itemCount - 1] = Item();
+			for (int i = choice - 1; i < itemCount - 1; i++)
+				inventory[i] = inventory[i + 1];
 			itemCount--;
 		}
 		else
@@ -495,6 +368,48 @@ void Player::useItem()
 	else
 	{
 		selectedItem.Use();
+	}
+}
+
+void Player::moveTo(int nextRoom)
+{
+		if (nextRoom == -1)
+	{
+		cout << "You can't go that way!" << endl << endl;
+		return;
+	}
+	else if (locations.rooms[nextRoom].isLocked)
+	{
+		cout << "The door is locked. Maybe you need a key?" << endl << endl;
+		return;
+	}
+	
+	currentRoom = nextRoom;
+
+	// checks for enemies first & makes sure it is impossible to accidentally battle an "unknown enemy"
+	Enemy& enemy = locations.rooms[currentRoom].roomEnemy;
+	if(locations.rooms[currentRoom].hasEnemy && !enemy.isDefeated && enemy.getEntityName() != "None")
+	{
+		int encounterChance = rand() % 100;
+		if (encounterChance < 85)
+		{
+			battle(locations.rooms[currentRoom].roomEnemy);
+		}
+		else
+		{
+			cout << "You hear movement nearby, but nothing happens...\n\n";
+		}
+	}
+
+	if(!isDead())
+	{
+		if (!locations.rooms[currentRoom].visited)
+		{
+			cout << locations.rooms[currentRoom].roomDescription << endl;
+			locations.rooms[currentRoom].visited = true;
+		}
+		else
+			cout << "You return to the " << locations.rooms[currentRoom].roomName << ".\n\n";
 	}
 }
 

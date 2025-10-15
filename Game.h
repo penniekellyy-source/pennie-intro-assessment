@@ -19,7 +19,7 @@ public:
 
 	Entity()
 	{
-		entityName = "Unknown";
+		entityName = "None";
 		entityHealth = 100;
 		entityAttack = 10;
 		currentRoom = 0;
@@ -113,7 +113,7 @@ public:
 
 	bool isDefeated;
 
-	Enemy() : Entity("Unknown", 100, 10)
+	Enemy() : Entity("None", 100, 10)
 	{
 		isDefeated = false;
 	}
@@ -190,6 +190,7 @@ public:
 	void showInventory();
 	void useItem();
 	void battle(Enemy& enemy);
+	void moveTo(int nextRoom);
 };
 
 
