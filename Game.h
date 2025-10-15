@@ -166,7 +166,7 @@ public:
 
 	Locations();
 	Locations(int size);
-	Room rooms[5];
+	Room rooms[6];
 };
 
 class Player : public Entity
@@ -189,6 +189,7 @@ public:
 	void pickUpItem();
 	void showInventory();
 	void useItem();
+	void battle(Enemy& enemy);
 };
 
 

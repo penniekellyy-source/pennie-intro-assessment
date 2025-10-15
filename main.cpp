@@ -3,12 +3,16 @@
 #include <fstream>
 #include "StringUtil.h"
 #include "Game.h"
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
 int main()
 {
 	Player player;
+
+	srand(static_cast<unsigned>(time(0)));
 
 	player.playGame();
 
