@@ -105,7 +105,7 @@ Locations::Locations(int size)
 	rooms[2].roomItem = Item();
 	rooms[3].roomItem = Item();
 	rooms[4].roomItem = Code(); // east door code in west room
-	rooms[5].roomItem = Item("Healing Potion", "Restores some of your health.");
+	rooms[5].roomItem = Item("Healing Potion", "Restores some of your health."); // this doesn't work yet lol
 
 	rooms[1].roomEnemy = Enemy("Goblin", 30, 5);
 	rooms[1].hasEnemy = true;
@@ -162,7 +162,7 @@ void Player::playGame()
 		{
 			cout << "You take a look around the room..." << endl;
 			if (locations.rooms[currentRoom].roomItem.getItemName() == "Nothing")
-				cout << "You didn’t find anything of use." << endl << endl;
+				cout << "You didn't find anything of use." << endl << endl;
 			else
 				cout << "You found " << locations.rooms[currentRoom].roomItem.getItemName()
 				<< "! " << locations.rooms[currentRoom].roomItem.getItemDescription() << endl << endl;
